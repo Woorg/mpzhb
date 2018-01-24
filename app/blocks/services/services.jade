@@ -1,0 +1,22 @@
+include ../icon/icon
+
+mixin services()
+	section.services
+		.services__in.container
+			h2.services__title Услуги
+			ul.services__list.row
+				li.services__item.services__item_first.col-md-4
+					a.services__link(href="#")
+						.services__item-title Доставка продукции авто и ж/д транспортом
+						.services__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum viverra libero vitae semper. Ut leo nisl, tempus.
+						+icon('service-icon-1', true).services__icon
+				li.services__item.services__item_second.col-md-4
+					a.services__link(href="#")
+						.services__item-title Изготовление металлоконструкций по индивидуальным размерам
+						.services__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum viverra libero vitae semper. Ut leo nisl, tempus.
+						+icon('service-icon-2', true).services__icon
+				li.services__item.services__item_third.col-md-4
+					a.services__link(href="#")
+						.services__item-title Услуги лаборатории
+						.services__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum viverra libero vitae semper. Ut leo nisl, tempus.
+						+icon('service-icon-3', true).services__icon

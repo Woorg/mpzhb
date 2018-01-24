@@ -1,0 +1,36 @@
+.products
+	display block
+	&__in
+		padding-top 70px
+		padding-bottom 70px
+	&__title
+		margin-bottom 50px
+		@extends .title
+		text-align center
+	&__list
+		font-size 0
+	&__item
+		width 360px
+		display inline-block
+		vertical-align top
+		&:nth-child(3n+2)
+			margin-right 30px
+			margin-left 30px
+	&__link
+		display block
+		text-decoration none
+		color #292929
+		&:hover
+			color currentColor
+			text-decoration none
+			.products__item-title
+				text-decoration none
+	&__image
+		margin-bottom 18px
+	&__item-title
+		margin-bottom 22px
+		font-size 18px
+		line-height 28px
+		text-decoration underline
+		text-transform uppercase
+		color currentColor

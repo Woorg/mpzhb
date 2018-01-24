@@ -1,0 +1,60 @@
+.header
+	&__top
+		padding-top 12px
+		padding-bottom 15px
+		min-height 50px
+		background-color #292929
+		font-size 14px
+		color #7f7f7f
+	&__time,
+	&__phone,
+	&__bid,
+	&__download,
+	&__tender
+		display inline-block
+		vertical-align middle
+		color #7f7f7f
+		text-decoration none
+		font-size 14px
+		&:hover
+			color #7f7f7f
+			text-decoration underline
+	&__time,
+	&__phone
+		margin-right 30px
+		&:last-child
+			margin-right 0
+	&__time-icon,
+	&__phone-icon,
+	&__bid-icon,
+	&__download-icon,
+	&__tender-icon
+		margin-right 5px
+		display inline-block
+		vertical-align middle
+		width 14px
+		height 14px
+		fill #4cbaba
+	&__top-right
+		padding-top 7px
+		justify()
+	&__body
+		padding-top 34px
+		padding-bottom 35px
+		background-color #ffffff
+		font-size 0
+		box-shadow 0 0 20px rgba(41, 41, 41, .2)
+	&__in
+		clr()
+	&__logo,
+	&__Nav,
+	&__search-form
+		display inline-block
+		vertical-align middle
+	&__logo
+		margin-right 65px
+	&__search-form
+		margin-top 12px
+		float right
+.logo
+	retinaSprite($logo_group)

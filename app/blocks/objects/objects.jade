@@ -1,0 +1,30 @@
+include ../icon/icon
+
+mixin objects()
+	section.objects
+		h2.objects__title Наши объекты
+		.objects__carousel.carousel 
+			ul.carousel__list
+				li.carousel__item(style="background-image: url('assets/images/content/object-1.jpg');")
+					a.carousel__link(href="#")
+						.carousel__w
+							.carousel__icon
+							.carousel__text Lorem ipsum dolor sit amet adipiscing elit
+				li.carousel__item(style="background-image: url('assets/images/content/object-2.jpg');")
+					a.carousel__link(href="#")
+						.carousel__w
+							.carousel__icon
+							.carousel__text Lorem ipsum dolor sit amet adipiscing elit
+				li.carousel__item(style="background-image: url('assets/images/content/object-3.jpg');")
+					a.carousel__link(href="#")
+						.carousel__w
+							.carousel__icon
+							.carousel__text Lorem ipsum dolor sit amet adipiscing elit
+				li.carousel__item(style="background-image: url('assets/images/content/object-4.jpg');")
+					a.carousel__link(href="#")
+						.carousel__w
+							.carousel__icon
+							.carousel__text Lorem ipsum dolor sit amet adipiscing elit
+		.objects__button-w
+			a.objects__button.button(href="#") Все объекты
+				+icon('button-arrow', true).button__icon

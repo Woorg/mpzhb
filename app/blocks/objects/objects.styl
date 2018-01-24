@@ -1,0 +1,80 @@
+.objects
+	display block
+	padding-top 67px
+	padding-bottom 82px
+	overflow hidden
+	&__title
+		margin-bottom 48px
+		@extends .title
+		text-align center
+	&__carousel
+		margin-bottom 60px
+	&__button-w
+		text-align center
+	&__button
+		&:hover
+			color #fff
+.carousel
+	&__list
+		font-size 0
+		height 480px
+	&__item
+		width 480px
+		height 480px
+		display inline-block
+		vertical-align top
+	&__link
+		position relative
+		height 100%
+		display block
+		text-decoration none
+		color #fff
+		cursor pointer
+		text-align center
+		tr(all .3s ease)
+		&:after
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			// background #4cbaba
+			visibility hidden
+			opacity 0
+			background rgba(76, 186, 186,.4)
+			content ''
+			tr(all .3s ease)
+		&:hover
+			color currentColor
+			text-decoration none
+			&:after
+				visibility visible
+				opacity 1
+			.carousel__w
+				visibility visible
+				opacity 1
+			.carousel__text
+				// text-decoration none
+				color #fff
+	&__w
+		position absolute
+		top 50%
+		left 50%
+		padding-right 50px
+		padding-left 50px
+		width 100%
+		transform translate(-50%, -50%)
+		visibility hidden
+		opacity 0
+		text-align center
+		tr(all .3s ease)
+	&__icon
+		margin-bottom 30px
+		display inline-block
+		vertical-align middle
+		retinaSprite($magnifying_glass_group)
+	&__text
+		font-size 18px
+		line-height 27px
+		text-transform uppercase
+		text-decoration underline

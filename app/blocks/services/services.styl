@@ -1,0 +1,55 @@
+.services
+	display block
+	background #eeeeee
+	&__in
+		padding-top 70px
+		padding-bottom 70px
+	&__title
+		margin-bottom 43px
+		@extends .title
+		text-align center
+	&__list
+		clr()
+	// &__item
+	// 	position relative
+	&__item_first
+		.services__icon
+			top 8px
+			width 68px
+			height 65px
+	&__item_second
+		.services__icon
+			top 12px
+			width 68px
+			height 54px
+	&__item_third
+		.services__icon
+			top 7px
+			left 10px
+			width 47px
+			height 68px
+	&__icon
+		position absolute
+		top 0
+		left 0
+		fill #4cbaba
+	&__link
+		position relative
+		padding-left 96px
+		display block
+		color #292929
+		text-decoration none
+		&:hover
+			color currentColor
+			text-decoration none
+			.services__item-title
+				text-decoration none
+	&__item-title
+		margin-bottom 10px
+		font-size 18px
+		line-height 28px
+		text-decoration underline
+		text-transform uppercase
+		letter-spacing tracking(-25, 18)
+	&__item-text
+		letter-spacing tracking(-25, 16)

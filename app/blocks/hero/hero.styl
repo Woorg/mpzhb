@@ -1,0 +1,53 @@
+.hero
+	display block
+	color #ffffff
+	overflow hidden
+	// &__slider
+	// 	min-height 760px
+	&__title
+		margin 0
+		margin-bottom 30px
+		font-size 80px
+		font-weight bold
+		line-height 1.225
+		text-transform uppercase
+		color #ffffff
+		span
+			color #4cbaba
+	&__text
+		margin-bottom 50px
+		color currentColor
+		font-size 36px
+		line-height 46px
+	// &__button
+.slider
+	&__list
+		font-size 0
+	&__item
+		background-size cover
+		object-fit cover
+		min-height 760px
+	&__in
+		position relative
+		min-height 760px
+		text-align center
+	&__item-w
+		position absolute
+		top 50%
+		left 50%
+		width 100%
+		transform translate(-50%, calc(-50% - 12px))
+	.slick-arrow
+		z-index 1
+		width 40px
+		height 40px
+		background url('../images/general/slider-arrow.svg') 0 0 / cover no-repeat
+		hide-text()
+		&:hover
+			background url('../images/general/slider-arrow.svg') 0 0 / cover no-repeat
+
+		&.slick-prev
+			left 92px
+			transform translateY(-50%) rotate(180deg)
+		&.slick-next
+			right 92px

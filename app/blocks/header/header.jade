@@ -1,0 +1,43 @@
+include ../icon/icon
+
+mixin header()
+	header.header
+		.header__top
+			.container.header__in
+				.row
+					.col-md-6.header__top-left
+						.header__time
+							+icon('clock', true).header__time-icon 
+							span Пн-Вт с 9:00 до 18:00
+						a.header__phone(href="tel:+74955585851")
+							+icon('phone', true).header__phone-icon 
+							span +7 (495) 558 58 51
+					.col-md-6.header__top-right
+						a.header__bid(href="") 
+							+icon('mail', true).header__bid-icon
+							span Отправить заявку
+						a.header__download(href="")
+							+icon('download', true).header__download-icon
+							span Скачать прайс-лист
+						a.header__tender(href="")
+							+icon('chart', true).header__tender-icon
+							span Пригласить в тендер
+		.header__body
+			.container.header__in
+				a.header__logo.logo(href="#") Моспромжелезобетон
+				nav.header__nav.nav
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href="#") Продукция
+								+icon('nav-icon', true).nav__link-icon
+						li.nav__item
+							a.nav__link(href="#") Услуги
+								+icon('nav-icon', true).nav__link-icon
+						li.nav__item
+							a.nav__link(href="#") Компания
+								+icon('nav-icon', true).nav__link-icon
+				.header__search-form.search-form
+					form.search-form__form(action="/", method="get")
+						input.search-form__input(type="text", value="", placeholder="")
+						button.search-form__submit(type="submit")
+							+icon('search', true).search-form__submit-icon
