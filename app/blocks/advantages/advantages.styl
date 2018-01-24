@@ -1,9 +1,13 @@
 .advantages
 	padding-left 60px
-	background #94d6d5
+	// background #94d6d5
+	+r($l)
+		padding-left 0
 	&__title
 		margin-bottom 43px
 		@extends .title
+		+r($l)
+			margin-bottom 27px
 	// &__list
 	&__item
 		position relative

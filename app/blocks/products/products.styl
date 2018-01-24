@@ -3,19 +3,30 @@
 	&__in
 		padding-top 70px
 		padding-bottom 70px
+		+r($l)
+			padding-top 44px
+			padding-bottom 44px
 	&__title
 		margin-bottom 50px
 		@extends .title
 		text-align center
+		+r($l)
+			margin-bottom 31px
+	&__list-w
+		overflow hidden
 	&__list
+		margin-right -30px
+		margin-right ratio-percentage(-30,1170)
 		font-size 0
 	&__item
+		margin-right 30px
+		margin-right ratio-percentage(30,1170)
 		width 360px
+		width ratio-percentage(360,1170)
 		display inline-block
 		vertical-align top
-		&:nth-child(3n+2)
-			margin-right 30px
-			margin-left 30px
+		+r($l)
+			width 47.4%
 	&__link
 		display block
 		text-decoration none
@@ -34,3 +45,6 @@
 		text-decoration underline
 		text-transform uppercase
 		color currentColor
+		+r($l)
+			font-size 14px
+			line-height 18px

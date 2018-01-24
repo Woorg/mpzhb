@@ -2,8 +2,6 @@
 	display block
 	color #ffffff
 	overflow hidden
-	// &__slider
-	// 	min-height 760px
 	&__title
 		margin 0
 		margin-bottom 30px
@@ -14,11 +12,24 @@
 		color #ffffff
 		span
 			color #4cbaba
+		+r($l)
+			font-size 50px
+		+r($t)
+			font-size 31px
+		+r($m)
+			margin-bottom 15px
+			font-size 20px
 	&__text
 		margin-bottom 50px
 		color currentColor
 		font-size 36px
 		line-height 46px
+		+r($l)
+			font-size 22px
+			line-height 29px
+		+r($t)
+			font-size 14px
+			font-size 18px
 	// &__button
 .slider
 	&__list
@@ -27,10 +38,14 @@
 		background-size cover
 		object-fit cover
 		min-height 760px
+		+r($l)
+			min-height 475px
 	&__in
 		position relative
 		min-height 760px
 		text-align center
+		+r($l)
+			min-height 475px
 	&__item-w
 		position absolute
 		top 50%
@@ -43,11 +58,20 @@
 		height 40px
 		background url('../images/general/slider-arrow.svg') 0 0 / cover no-repeat
 		hide-text()
+		opacity 1
+		tr(all .3s ease)
+		+r($t)
+			width 20px
+			height 20px
 		&:hover
 			background url('../images/general/slider-arrow.svg') 0 0 / cover no-repeat
-
+			opacity .8
 		&.slick-prev
 			left 92px
 			transform translateY(-50%) rotate(180deg)
+			+r($l)
+				left 10px
 		&.slick-next
 			right 92px
+			+r($l)
+				right 10px

@@ -18,11 +18,16 @@
 	&__list
 		font-size 0
 		height 480px
+		+r($l)
+			height 300px
 	&__item
 		width 480px
 		height 480px
 		display inline-block
 		vertical-align top
+		+r($l)
+			width 300px
+			height 300px
 	&__link
 		position relative
 		height 100%
@@ -32,6 +37,7 @@
 		cursor pointer
 		text-align center
 		tr(all .3s ease)
+		object-fit cover
 		&:after
 			position absolute
 			top 0
@@ -51,6 +57,7 @@
 				visibility visible
 				opacity 1
 			.carousel__w
+				z-index 1
 				visibility visible
 				opacity 1
 			.carousel__text
@@ -73,8 +80,33 @@
 		display inline-block
 		vertical-align middle
 		retinaSprite($magnifying_glass_group)
+		+r($l)
+			margin-bottom 19px
 	&__text
 		font-size 18px
 		line-height 27px
 		text-transform uppercase
 		text-decoration underline
+		+r($l)
+			font-size 14px
+			line-height 18px
+	.slick-arrow
+		z-index 1
+		width 40px
+		height 40px
+		background url('../images/general/slider-arrow.svg') 0 0 / cover no-repeat
+		hide-text()
+		opacity 1
+		tr(all .3s ease)
+		&:hover
+			background url('../images/general/slider-arrow.svg') 0 0 / cover no-repeat
+			opacity .8
+		&.slick-prev
+			left 10px
+			transform translateY(-50%) rotate(180deg)
+			+r($l)
+				left 10px
+		&.slick-next
+			right 10px
+			+r($l)
+				right 10px

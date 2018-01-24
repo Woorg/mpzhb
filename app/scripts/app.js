@@ -6,7 +6,7 @@ import slick from 'slick-carousel';
 	svg4everybody();
 
 	var styles = [
-		'padding: 9px',
+		'padding: 0 9px',
 		'background: #fff',
 		'color: #000',
 		'display: inline-block',
@@ -30,9 +30,28 @@ import slick from 'slick-carousel';
 		const $carousel = $('.carousel__list');
 		if ($carousel.length) {
 			$carousel.slick({
-				slidesToShow: 4
-            });
+				slidesToShow: 4,
+				responsive: [
+					{
+					breakpoint: 1200,
+						settings: {
+						  slidesToShow: 2
+						}
+					},
+					{
+					breakpoint: 991,
+						settings: {
+						  slidesToShow: 1
+						}
+					}
+
+				]
+			});
+
 		}
+		// $(window).on('resize orientationchange', function() {
+		// 	$carousel.slick('resize');
+		// });
 	});
 
 })(jQuery);
