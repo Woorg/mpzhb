@@ -1,0 +1,120 @@
+.catalog
+	display block
+	&__in
+		padding-top 70px
+		padding-bottom 70px
+		+r($l)
+			padding-top 44px
+			padding-bottom 44px
+		+r($t)
+			padding-top 27px
+			padding-bottom 27px
+	&__title
+		margin-top 0
+		margin-bottom 50px
+		@extends .title
+		text-align center
+		+r($l)
+			margin-bottom 37px
+		+r($t)
+			margin-bottom 23px
+	&__nav
+		margin-bottom 40px
+		font-size 0
+		text-align center
+	&__nav-item
+		display inline-block
+		vertical-align top
+		font-size 14px
+		text-transform uppercase
+		&.current-menu-item
+			.catalog__nav-link
+				border-radius 5px
+				border 2px solid #4cbaba
+				background-color #ffffff
+	&__nav-link
+		border 2px solid transparent
+		padding-top 10px
+		padding-right 16px
+		padding-bottom 11px
+		padding-left 18px
+		display block
+		color #292929
+		text-decoration none
+		tr(all .3s ease)
+		&:hover
+			color #292929
+			text-decoration none
+	&__list
+		font-size 0
+		text-align left
+	&__item
+		margin-bottom 18px
+		display inline-block
+		vertical-align top
+		float none
+		+r($l)
+			width 33.3%
+		+r($t)
+			width 50%
+		+r($m)
+			width 100%
+	&__link
+		display block
+		text-decoration none
+		font-size 16px
+		line-height 24px
+		color #292929
+		letter-spacing tracking(-25, 16)
+		&:hover
+			color #292929
+			text-decoration none
+			.catalog__item-title
+				text-decoration none
+	&__image
+		position relative
+		margin-bottom 23px
+		width 100%
+		height 260px
+		border 2px solid #eeeeee
+		background-color #ffffff
+		img
+			position absolute
+			top 50%
+			left 50%
+			display block
+			max-width 100%
+			height auto
+			transform translate(-50%, -50%)
+
+	&__item-title
+		margin-bottom 5px
+		text-decoration underline
+		span,
+		i,
+		strong
+			padding-left 5px
+			display inline-block
+			vertical-align top
+			text-decoration none
+			color #4cbaba
+	&__item-price
+		color #4cbaba
+		font-size 24px
+		font-weight 700
+		line-height 43px
+		letter-spacing tracking(-25, 24)
+
+.catalog_sub
+	position relative
+	overflow hidden
+	&:before
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		width 1920px
+		height 2px
+		background-color #eeeeee
+		content ""
+

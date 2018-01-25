@@ -1,0 +1,31 @@
+mixin related()
+	.related
+		.container.related__in
+			h2.related__title Вы смотрели:
+			ul.related__list
+				li.related__item.col-md-4.col-sm-4.col-xs-6
+					a.related__link.row(href="#")
+						.related__image.col-md-6.col-sm-12.col-xs-12
+							img(src="assets/images/content/related-img-1.jpg", alt="")
+						.related__w.col-md-6.col-sm-12.col-xs-12
+							.related__item-title Сборные железобетонные ограды
+							.related__item-price от 21 000 р.
+				li.related__item.col-md-4.col-sm-4.col-xs-6
+					a.related__link.row(href="#")
+						.related__image.col-md-6.col-sm-12.col-xs-12
+							img(src="assets/images/content/related-img-2.jpg", alt="")
+						.related__w.col-md-6.col-sm-12.col-xs-12
+							.related__item-title Плиты аэродромные
+							.related__item-price от 14 000 р.
+				li.related__item.col-md-4.col-sm-4.col-xs-6
+					a.related__link.row(href="#")
+						.related__image.col-md-6.col-sm-12.col-xs-12
+							img(src="assets/images/content/related-img-3.jpg", alt="")
+						.related__w.col-md-6.col-sm-12.col-xs-12
+							.related__item-title Блоки разделительной полосы, марки БД
+							.related__item-price от 4 000 р.
+
+			.related__button-w
+				a.related__button.button.button_second(href="#")
+					+icon('refresh', true).button__icon
+					| Показать еще

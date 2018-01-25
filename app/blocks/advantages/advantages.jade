@@ -8,3 +8,23 @@ mixin advantages()
 			li.advantages__item Членство в Гильдии предприятий строительной индустрии
 			li.advantages__item Диплом Московской торгово-промышленной палаты
 			li.advantages__item Диплом в номинации «Производство строительных материалов, изделий и конструкций, инжениринговые услуги, контроль качества строительства (изготовления строительных материалов, изделий и конструкций)»
+
+mixin advantages-second()
+	section.advantages.advantages_second
+		.advantages__in.container
+			ul.advantages__list.row
+				li.advantages__item.advantages__item_first.col-md-4
+					a.advantages__link(href="#")
+						.advantages__item-title Современное оборудование
+						.advantages__item-text В 2010 - 2012 годах на предприятии проведена полная модернизация производственного оборудования.
+						.advantages__icon
+				li.advantages__item.advantages__item_second.col-md-4
+					a.advantages__link(href="#")
+						.advantages__item-title Сжатые сроки производства
+						.advantages__item-text Мощности завода позволяют справляться практически с любыми объемами производства без задержек и очередей.
+						+icon('advantages-2', true).advantages__icon
+				li.advantages__item.advantages__item_third.col-md-4
+					a.advantages__link(href="#")
+						.advantages__item-title Гибкое ценообразование
+						.advantages__item-text Мы готовы идти навстречу клиентам в вопросах ценообразования.
+						.advantages__icon

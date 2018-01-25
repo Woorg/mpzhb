@@ -1,0 +1,70 @@
+.related
+	display block
+	&__in
+		padding-top 50px
+		padding-bottom 58px
+	&__title
+		margin-bottom 30px
+		@extends .subtitle
+		text-align left
+	&__list
+		margin-bottom 30px
+		font-size 0
+		clr()
+	&__item
+		min-height 252px
+		display inline-block
+		vertical-align top
+		+r($t)
+			margin-bottom 10px
+		+r($m)
+			width 100%
+	&__link
+		display block
+		font-size 0
+		color #292929
+		text-decoration none
+		&:hover
+			color #292929
+			text-decoration none
+			.related__item-title
+				text-decoration none
+	&__image,
+	&__w
+		display inline-block
+		vertical-align top
+	&__image
+		position relative
+		// margin-right 30px
+		width 161px
+		height 161px
+		border 2px solid #eeeeee
+		background-color #ffffff
+		img
+			position absolute
+			top 50%
+			left 50%
+			display block
+			max-width 100%
+			height auto
+			transform translate(-50%, -50%)
+	&__w
+		padding-top 13px
+		padding-left 34px
+		+r($d)
+			padding-left 0
+	&__item-title
+		margin-bottom 3px
+		color #292929
+		font-size 14px
+		line-height 21px
+		letter-spacing tracking(-25,14)
+		text-decoration underline
+	&__item-price
+		color #4cbaba
+		font-size 18px
+		font-weight bold
+		line-height 33px
+		letter-spacing tracking(-25,18)
+	&__button-w
+		text-align center

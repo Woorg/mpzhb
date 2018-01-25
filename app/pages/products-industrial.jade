@@ -1,0 +1,17 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/catalog/catalog
+include /blocks/advantages/advantages
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Моспромжелезобетон - Изделия для промышленных зданий';
+
+block content
+	+header()
+	+breadcrumbs()
+	+catalog()
+	+advantages-second()
+	+footer()

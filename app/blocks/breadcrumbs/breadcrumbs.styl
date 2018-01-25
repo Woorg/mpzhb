@@ -1,0 +1,48 @@
+.breadcrumbs
+	background #eeeeee
+	&__in
+		padding-top 13px
+		padding-bottom 15px
+		line-height 1
+	span
+		display inline-block
+		vertical-align middle
+		font-size 14px
+		color #292929
+		line-height 1.4
+		letter-spacing tracking(-25, 14)
+	span
+		a
+			margin-right 5px
+			display inline-block
+			text-decoration underline
+			color #292929
+			&:hover
+				text-decoration none
+
+
+	span >
+		span
+			&:nth-child(1)
+				color #292929
+				a
+					margin-top -2px
+					margin-right 8px
+					display inline-block
+					vertical-align middle
+					width 14px
+					height 14px
+					background url('../images/general/home.svg') 0 0 no-repeat
+					background-size cover
+					line-height 1
+					hide-text()
+
+
+
+		.breadcrumb_last
+			color #7f7f7f
+			font-size 14px
+			line-height 1.4
+			text-decoration none
+
+
