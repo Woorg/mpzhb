@@ -3,12 +3,22 @@
 	padding-top 67px
 	padding-bottom 82px
 	overflow hidden
+	+r($l)
+		padding-top 44px
+		padding-bottom 44px
+	+r($t)
+		padding-top 22px
+		padding-bottom 22px
 	&__title
 		margin-bottom 48px
 		@extends .title
 		text-align center
+		+r($l)
+			margin-bottom 24px
 	&__carousel
 		margin-bottom 60px
+		+r($l)
+			margin-bottom 30px
 	&__button-w
 		text-align center
 	&__button
@@ -51,7 +61,7 @@
 			content ''
 			tr(all .3s ease)
 		&:hover
-			color currentColor
+			color #fff
 			text-decoration none
 			&:after
 				visibility visible

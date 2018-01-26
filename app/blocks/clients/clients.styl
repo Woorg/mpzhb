@@ -4,10 +4,19 @@
 	&__in
 		padding-top 72px
 		padding-bottom 72px
+		+r($l)
+			padding-top 36px
+			padding-bottom 36px
+		+r($t)
+			padding-top 22px
+			padding-bottom 22px
+
 	&__title
 		margin-bottom 50px
 		@extends .title
 		text-align center
+		+r($l)
+			margin-bottom 25px
 	&__list-w
 		overflow hidden
 	&__list

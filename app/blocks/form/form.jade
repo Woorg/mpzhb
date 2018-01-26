@@ -1,0 +1,22 @@
+mixin form()
+	aside.form&attributes(attributes)
+		h2.form__title Заявка на услугу
+		.form__w
+			form(action="", method="post")
+				.form__field
+					label.form__label(for="name") Ваше имя:
+					input#name.form__input(type="text", value="", name="name_1", placeholder="")
+				.form__field.form__field_phone
+					label.form__label(for="phone") Телефон:
+					input#phone.form__input(type="text", value="", name="phone_1", placeholder="+7 (...)")
+				.form__field.form__field_message
+					label.form__label(for="message") Что Вас интересует?
+					textarea#message.form__textarea(value="", name="message_1")
+				.form__field.form__field_file
+					label.form__label.form__label_file(for="file")
+						.form__file-button Вложение
+						.form__file-text - не обязательно
+						input#file.form__file-input(type="file", value="", name="file_1")
+
+				input.form__submit.button(type="submit", value="Отправить заявку")
+

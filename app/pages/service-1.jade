@@ -1,0 +1,18 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/service/service
+include /blocks/advantages/advantages
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Доставка продукции авто и ж/д транспортом - Моспромжелезобетон';
+
+block content
+	+header()
+	+breadcrumbs-service-1()
+	main.main
+		+service()
+	+advantages-second()
+	+footer()

@@ -1,0 +1,125 @@
+.service
+	display block
+	&__in
+		padding-top 70px
+		padding-bottom 70px
+	&__title
+		margin-bottom 50px
+		@extends .title
+		text-align center
+		+r($l)
+			margin-bottom 34px
+		+r($t)
+			margin-bottom 22px
+	&__nav
+		margin-bottom 33px
+		+r($t)
+			margin-bottom (33 / 2)px
+
+	&__text
+		margin-bottom 44px
+		@extends .wysiwyg
+		+r($t)
+			margin-bottom (44 / 2)px
+	&__subtitle
+		margin-bottom 20px
+		@extends .subtitle
+		+r($t)
+			margin-bottom (20 / 2)px
+	&__form
+		margin-top 10px
+		margin-left 30px
+		+r($d)
+			margin-left 0
+	&__note
+		p
+			color #7f7f7f
+			font-size 16px
+			line-height 1.625
+			letter-spacing tracking(-25, 16)
+	&__type
+		margin-bottom 40px
+		+r($l)
+			margin-bottom 20px
+	&__type-img,
+	&__type-w
+		display inline-block
+		vertical-align top
+		font-size 0
+	&__type-img
+		position relative
+		margin-right 24px
+		width 458px
+		width ratio-percentage(458,750)
+		height 202px
+		+r(1319px)
+			margin-right 0
+			width 100%
+		img
+			position absolute
+			top 50%
+			left 0
+			display block
+			max-width 100%
+			height auto
+			transform translateY(-50%)
+	&__type-w
+		padding-top 6px
+		width 262px
+		width ratio-percentage(262, 750)
+		+r(1319px)
+			width 100%
+	&__type-title
+		margin-bottom 10px
+		display block
+		font-size 18px
+		text-decoration underline
+		text-transform uppercase
+		color #292929
+		letter-spacing tracking(-25, 18)
+		&:hover
+			color #292929
+			text-decoration none
+	&__type-text
+		font-size 16px
+		line-height 1.5
+		letter-spacing tracking(-25, 16)
+	&__specs
+		margin-bottom 40px
+		font-size 14px
+		letter-spacing tracking(-25, 14)
+		+r($l)
+			margin-bottom 20px
+	&__specs-item
+		padding-top 11px
+		padding-left 18px
+		padding-right 18px
+		padding-bottom 11px
+		clr()
+		&:nth-child(odd)
+			background #EEE
+
+		&:nth-child(even)
+			background #FFF
+		&:last-child
+			border-bottom 1px solid #eeeeee
+	&__specs-term
+		float left
+		+r($t)
+			max-width 70%
+		strong,
+		span
+			font-weight bold
+	&__specs-desc
+		float right
+
+	&__requisites
+		padding 30px
+		background #94D6D6
+	&__requisites-title
+		margin-bottom 10px
+		@extends .subtitle
+		font-size 24px
+		letter-spacing tracking(-25, 24)
+		+r($l)
+			font-size 16px

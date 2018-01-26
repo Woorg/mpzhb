@@ -3,7 +3,7 @@
 	// table-layout fixed
 	font-size 14px
 	letter-spacing tracking(-25, 14)
-	+r($l)
+	+r($t)
 		width 768px
 		display block
 		font-size 12px
@@ -24,9 +24,9 @@
 				border-top 1px solid #eeeeee
 				border-bottom none
 				padding-top 17px
-				padding-right 18px
+				padding-right 9px
 				padding-bottom 18px
-				padding-left 0
+				padding-left 9px
 				width auto
 				vertical-align middle
 				+r($l)
@@ -64,9 +64,9 @@
 			td
 				border-top 1px solid #eeeeee
 				padding-top 9px
-				padding-right 18px
+				padding-right 9px
 				padding-bottom 9px
-				padding-left 0
+				padding-left 9px
 				vertical-align middle
 				&:first-child
 					padding-left 18px
@@ -80,3 +80,34 @@
 						padding-right 5px
 					// +r($t)
 					// 	padding-right 5px
+
+.table_second
+	thead
+		tr
+			th
+				padding-top 19px
+				padding-bottom 19px
+				&:nth-child(4),
+				&:nth-child(5)
+					white-space normal
+	tbody
+		tr
+			td
+				padding-top 11px
+				padding-bottom 11px
+
+.table_third
+	thead
+		tr
+			th
+				padding-top 19px
+				padding-bottom 19px
+	tbody
+		tr
+			td
+				padding-top 11px
+				padding-bottom 11px
+	th,
+	td
+		&:last-child
+			text-align left

@@ -1,0 +1,276 @@
+include ../form/form
+
+mixin service()
+	.service&attributes(attributes)
+		.service__in.container
+			h1.service__title Доставка продукции авто и ж/д транспортом
+			nav.service__nav.nav.nav_third
+				ul.nav__list
+					li.nav__item.nav__item_active
+						a.nav__link(href="#link") Автотранспорт
+					li.nav__item
+						a.nav__link(href="#link") ж/д транспорт
+			.service__text
+				p ОАО «Моспромжелезобетон» осуществляет централизованную доставку ЖБИ и товарного бетона в пределах Москвы и Московской области. Доставка ЖБИ - железобетонных изделий осуществляется на 20-30 тонных полуприцепах с открытым кузовом (бортовая).
+			.service__row.row
+				.service__col.col-md-8
+					.service__row
+						h2.service__subtitle ЖБИ
+
+						table.table.table_second.service__table
+							thead
+								tr
+									th №
+									th Спецификация груза
+									th Грузоподъем ность, тн
+									th Стоимость в руб. с НДС за рейс
+									th Базовый пробег, км
+									th Свыше базового пробега за 1 км
+							tbody
+								tr
+									td 1
+									td Бортовой полуприцеп
+									td 20
+									td 5 350
+									td 30
+									td 75
+								tr
+									td 2
+									td Бортовой полуприцеп
+									td 30
+									td 7 200
+									td 30
+									td 75
+								tr
+									td 3
+									td Бортовая
+									td 14
+									td 6 000
+									td 30
+									td 75
+								tr
+									td 4
+									td Груз шириной от 2,5 до 3,5
+									td 20
+									td 10 000
+									td 80
+									td 60
+								tr
+									td 5
+									td Груз шириной от 2,5 до 3,5
+									td 30
+									td 15 000
+									td 80
+									td 60
+								tr
+									td 6
+									td Груз шириной от 3,5 до 4,0
+									td 20
+									td 15 000
+									td 80
+									td 90
+								tr
+									td 7
+									td Груз шириной от 3,5 до 4,0
+									td 30
+									td 15 000
+									td 80
+									td 60
+								tr
+									td 8
+									td Груз шириной от 4,0
+									td 23
+									td 15 000
+									td 80
+									td 90
+								tr
+									td 9
+									td Груз шириной от 4,0
+									td 30
+									td 20 000
+									td 80
+									td 60
+					.service__row
+						h2.service__subtitle Бетон
+
+						table.table.table_third.service__table
+							thead
+								tr
+									th Расстояние перевозки, км
+									th Цена за 1 м3 с НДС — 18% на перевозку автобетоносмесителями, руб *
+							tbody
+								tr
+									td 0-5
+									td 230
+								tr
+									td 6-10
+									td 230
+								tr
+									td 11-15
+									td 260
+
+						.service__note
+							p * Стоимость доставки бетона и раствора автобетоносмесителями на расстояние превышающее 30 км — договорная
+
+
+				.service__col.col-md-4
+					+form().service__form
+
+
+mixin service-2()
+	.service&attributes(attributes)
+		.service__in.container
+			h1.service__title Доставка продукции авто и ж/д транспортом
+			nav.service__nav.nav.nav_third
+				ul.nav__list
+					li.nav__item
+						a.nav__link(href="#link") Автотранспорт
+					li.nav__item.nav__item_active
+						a.nav__link(href="#link") ж/д транспорт
+			.service__text
+				p ОАО «Моспромжелезобетон» осуществляет централизованную доставку ЖБИ и товарного бетона в пределах Москвы и Московской области. Доставка ЖБИ - железобетонных изделий осуществляется на 20-30 тонных полуприцепах с открытым кузовом (бортовая).
+			.service__row.row
+				.service__col.col-md-8
+					.service__row
+						h2.service__subtitle Полувагон
+						.service__type
+							.service__type-img
+								img(src="assets/images/content/transport-img-1.jpg", alt="Полувагон")
+							.service__type-w
+								a.service__type-title(href="#") Расчет ж/д тарифа
+								.service__type-text Расчет ж/д тарифа производится на сайте системы «Успех». Система не расчитывает стоимость пробега порожнего вагона, маршрутной доставки грузов и перевозки грузов большой скоростью.
+
+						dl.service__specs
+							.service__specs-item
+								dt.service__specs-term Грузоподъемность, т
+								dd.service__specs-desc 70
+							.service__specs-item
+								dt.service__specs-term Масса тары вагона, т
+								dd.service__specs-desc 24
+							.service__specs-item
+								dt.service__specs-term Осевая нагрузка, тс
+								dd.service__specs-desc 23,5
+							.service__specs-item
+								dt.service__specs-term База вагона, мм
+								dd.service__specs-desc 8650
+
+							.service__specs-item
+								dt.service__specs-term <strong>Длина, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term по осям сцепления автосцепок
+								dd.service__specs-desc 13920
+							.service__specs-item
+								dt.service__specs-term по концевым балкам рамы
+								dd.service__specs-desc 3800
+							.service__specs-item
+								dt.service__specs-term Высота от УГР макс, мм
+								dd.service__specs-desc 243 (330)
+							.service__specs-item
+								dt.service__specs-term Высота от УГР до нижней обвязки, мм
+								dd.service__specs-desc 1450
+							.service__specs-item
+								dt.service__specs-term Объем кузова, м3
+								dd.service__specs-desc 88
+
+							.service__specs-item
+								dt.service__specs-term <strong>Внутренние размеры кузова, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term ширина
+								dd.service__specs-desc 2911
+							.service__specs-item
+								dt.service__specs-term длина
+								dd.service__specs-desc 12750
+							.service__specs-item
+								dt.service__specs-term высота
+								dd.service__specs-desc 12750
+							.service__specs-item
+								dt.service__specs-term Площадь пола, м3
+								dd.service__specs-desc 37,125
+							.service__specs-item
+								dt.service__specs-term Количество разгрузочных люков
+								dd.service__specs-desc 14
+
+					.service__row
+						h2.service__subtitle Платформа
+
+						.service__type
+							.service__type-img
+								img(src="assets/images/content/transport-img-2.jpg", alt="Платформа")
+							.service__type-w
+								a.service__type-title(href="#") Расчет ж/д тарифа
+								.service__type-text Расчет ж/д тарифа производится на сайте системы «Успех». Система не расчитывает стоимость пробега порожнего вагона, маршрутной доставки грузов и перевозки грузов большой скоростью.
+
+						dl.service__specs
+							.service__specs-item
+								dt.service__specs-term Грузоподъемность, т
+								dd.service__specs-desc 71
+							.service__specs-item
+								dt.service__specs-term Масса тары вагона, т
+								dd.service__specs-desc 21,4
+							.service__specs-item
+								dt.service__specs-term Осевая нагрузка, тс
+								dd.service__specs-desc 23,25
+							.service__specs-item
+								dt.service__specs-term База вагона, мм
+								dd.service__specs-desc 9720
+
+							.service__specs-item
+								dt.service__specs-term <strong>Длина, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term по осям сцепления автосцепок
+								dd.service__specs-desc 14620
+							.service__specs-item
+								dt.service__specs-term по концевым балкам рамы
+								dd.service__specs-desc 13400
+							.service__specs-item
+								dt.service__specs-term Высота от УГР макс, мм
+								dd.service__specs-desc 1820
+							.service__specs-item
+								dt.service__specs-term Высота от УГР до нижней обвязки, мм
+								dd.service__specs-desc 1310
+
+							.service__specs-item
+								dt.service__specs-term <strong>Внутренние размеры кузова, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term ширина
+								dd.service__specs-desc 2770
+							.service__specs-item
+								dt.service__specs-term длина
+								dd.service__specs-desc 13300
+							.service__specs-item
+								dt.service__specs-term Площадь пола, м2
+								dd.service__specs-desc 36,8
+
+							.service__specs-item
+								dt.service__specs-term <strong>Размер пола с открытыми бортами, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term длина
+								dd.service__specs-desc 13400
+							.service__specs-item
+								dt.service__specs-term ширина
+								dd.service__specs-desc 2870
+
+							.service__specs-item
+								dt.service__specs-term <strong>Высота бортов, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term продольный
+								dd.service__specs-desc 500
+							.service__specs-item
+								dt.service__specs-term торцевой
+								dd.service__specs-desc 400
+
+						.service__requisites
+							h2.service__requisites-title Железнодорожные реквизиты
+							ul.service__requisites-list
+								li.service__requisites-item Код станции № 199208
+								li.service__requisites-item Код предприятия № 3025
+
+
+				.service__col.col-md-4
+					+form().service__form

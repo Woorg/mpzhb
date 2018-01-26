@@ -7,7 +7,6 @@
 	li
 		display inline-block
 		vertical-align middle
-		// +r($m)
 		&:last-child
 			.nav__link,
 			a
@@ -67,3 +66,43 @@
 		color #292929
 		font-size 14px
 		line-height 1.4
+
+
+.nav_third
+	display block
+	.nav__list
+		font-size 0
+		white-space nowrap
+		text-align center
+	.nav__item
+		display inline-block
+		vertical-align top
+		&:last-child
+			.nav__link
+				padding-right 17px
+
+	.nav__item_active
+		.nav__link
+			border-radius 5px
+			border 2px solid #4cbaba
+			background-color #ffffff
+	.nav__link
+		border 2px solid transparent
+		padding-top 10px
+		padding-right 17px
+		padding-bottom 11px
+		padding-left 16px
+		display block
+		color #292929
+		font-size 14px
+		text-transform uppercase
+		text-decoration none
+		tr(all .3s ease)
+		&:hover,
+		&:focus
+			color #292929
+			text-decoration none
+		+r($t)
+			padding-right 6px
+			padding-left 8px
+			font-size 12px
