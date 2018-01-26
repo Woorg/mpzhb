@@ -1,0 +1,82 @@
+.table
+	// display block
+	// table-layout fixed
+	font-size 14px
+	letter-spacing tracking(-25, 14)
+	+r($l)
+		width 768px
+		display block
+		font-size 12px
+		overflow-x scroll
+
+	th,
+	td
+		&:last-child
+			text-align right
+	thead
+		&:first-child
+			tr
+				&:first-child
+					th
+						border-top 1px solid #eeeeee
+		tr
+			th
+				border-top 1px solid #eeeeee
+				border-bottom none
+				padding-top 17px
+				padding-right 18px
+				padding-bottom 18px
+				padding-left 0
+				width auto
+				vertical-align middle
+				+r($l)
+					padding-left 4px
+					padding-right 4px
+				// +r($t)
+				// 	padding-left 4px
+				// 	padding-right 4px
+				&:first-child
+					padding-left 18px
+					+r($l)
+						padding-left 5px
+					// +r($t)
+					// 	padding-left 5px
+				&:last-child
+					padding-right 18px
+					+r($l)
+						padding-right 5px
+					// +r($t)
+					// 	padding-right 5px
+
+				&:nth-child(4),
+				&:nth-child(5)
+					white-space nowrap
+	tbody
+		tr
+			&:nth-child(even)
+				background #fff
+			&:nth-child(odd)
+				background #eeeeee
+			&:last-child
+				td
+					border-bottom 1px solid #eeeeee
+
+			td
+				border-top 1px solid #eeeeee
+				padding-top 9px
+				padding-right 18px
+				padding-bottom 9px
+				padding-left 0
+				vertical-align middle
+				&:first-child
+					padding-left 18px
+					+r($l)
+						padding-left 5px
+					// +r($t)
+					// 	padding-left 5px
+				&:last-child
+					padding-right 18px
+					+r($l)
+						padding-right 5px
+					// +r($t)
+					// 	padding-right 5px

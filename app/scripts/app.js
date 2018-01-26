@@ -1,6 +1,7 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import slick from 'slick-carousel';
+import 'magnific-popup';
 
 (function ($) {
 	svg4everybody();
@@ -24,8 +25,8 @@ import slick from 'slick-carousel';
 	$(function() {
 		const $slider = $('.slider__list');
 		if ($slider.length) {
-            $slider.slick({
-            });
+				$slider.slick({
+			});
 		}
 		const $carousel = $('.carousel__list');
 		if ($carousel.length) {
@@ -49,9 +50,58 @@ import slick from 'slick-carousel';
 			});
 
 		}
-		// $(window).on('resize orientationchange', function() {
-		// 	$carousel.slick('resize');
-		// });
+		const $cardSlider = $('.card__slider');
+		const $cardThumbs = $('.card__thumbs');
+
+		$cardSlider.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.card__thumbs'
+		});
+		$cardThumbs.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.card__slider',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: true,
+			mobileFirst: true
+		});
+
+
+
+
+		// Tabs
+		const tabsNavLink = $('.tabs__item');
+		const tabsNavLinkActive = 'tabs__item_active';
+		const tab = $('.tabs__tab');
+		const tabActive = 'tabs__tab_active';
+
+		tabsNavLink.click(function (event) {
+			event.preventDefault();
+			$(this).addClass(tabsNavLinkActive);
+			$(this).siblings().removeClass(tabsNavLinkActive);
+			const tabCurrent = $(this).children().attr('href');
+			tab.not(tabCurrent).removeClass(tabActive).hide();
+			$(tabCurrent).fadeIn(50).addClass(tabActive).show();
+
+			console.log(tabCurrent);
+
+		});
+
+
+		// Card magnific
+
+		$('.card__slider-link').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+
+
 	});
 
 })(jQuery);

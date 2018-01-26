@@ -1,0 +1,44 @@
+.discount
+	border 2px solid #eec400
+	padding-top 20px
+	padding-right 30px
+	padding-bottom 20px
+	padding-left 28px
+	background-color #fff
+	&__title
+		margin-bottom 10px
+		font-size 18px
+		font-weight bold
+		text-transform uppercase
+		letter-spacing tracking(-25, 18)
+		+r($t)
+			font-size 12px
+	&__item
+		margin-bottom 10px
+		display block
+		font-size 18px
+		line-height 24px
+		color #292929
+		text-decoration underline
+		letter-spacing tracking(-25, 18)
+		+r($t)
+			font-size 12px
+		&:hover
+			color #292929
+			text-decoration none
+	&__price
+		font-size 24px
+		font-weight bold
+		color #4cbaba
+		line-height 1.4
+		letter-spacing tracking(-25, 24)
+		+r($t)
+			font-size 15px
+	&__note
+		font-size 18px
+		font-weight bold
+		color #4cbaba
+		letter-spacing tracking(-25, 18)
+		+r($t)
+			font-size 12px
+

@@ -10,7 +10,6 @@
 	tr(font-size .3s ease)
 	+r($t)
 		font-size 14px
-
 .button
 	border none
 	padding-top 21px
@@ -33,9 +32,10 @@
 		padding-right 30px
 		padding-bottom 10px
 		padding-left 30px
-	&:hover
+	&:hover,
+	&:focus
 		background-color darken(#4cbaba, 10)
-		color currentColor
+		color #ffffff
 		text-decoration none
 	&__icon
 		margin-left 15px
@@ -130,5 +130,8 @@ img
 		letter-spacing tracking(-25, 16)
 		&:last-child
 			margin-bottom 0
+		+r($l)
+			margin-bottom 31px
 		+r($t)
+			margin-bottom 19px
 			font-size 14px

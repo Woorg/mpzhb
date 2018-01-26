@@ -1,0 +1,20 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/card/card
+include /blocks/related/related
+include /blocks/advantages/advantages
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Колонны легкого каркаса верхние рядовые - Моспромжелезобетон';
+
+block content
+	+header()
+	+breadcrumbs-card()
+	main.main
+		+card()
+		+related()
+	+advantages-second()
+	+footer()

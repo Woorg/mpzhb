@@ -1,0 +1,39 @@
+.tabs
+	display block
+	&__nav
+		font-size 0
+		white-space nowrap
+	&__item
+		display inline-block
+		vertical-align top
+		&.tabs__item_active
+			.tabs__link
+				border-radius 5px
+				border 2px solid #4cbaba
+				background-color #ffffff
+	&__link
+		border 2px solid transparent
+		padding-top 10px
+		padding-right 17px
+		padding-bottom 11px
+		padding-left 16px
+		display block
+		color #292929
+		font-size 14px
+		text-transform uppercase
+		text-decoration none
+		tr(all .3s ease)
+		&:hover,
+		&:focus
+			color #292929
+			text-decoration none
+		+r($t)
+			padding-right 6px
+			padding-left 8px
+			font-size 12px
+
+	&__tab
+		display none
+	&__tab_active
+		display block
+		font-size 14px

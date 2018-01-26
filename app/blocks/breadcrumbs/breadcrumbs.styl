@@ -11,7 +11,10 @@
 		color #292929
 		line-height 1.4
 		letter-spacing tracking(-25, 14)
+		+r($t)
+			font-size 12px
 	span
+		color #292929
 		a
 			margin-right 5px
 			display inline-block
@@ -19,12 +22,10 @@
 			color #292929
 			&:hover
 				text-decoration none
-
-
 	span >
 		span
+			color #7f7f7f
 			&:nth-child(1)
-				color #292929
 				a
 					margin-top -2px
 					margin-right 8px
@@ -36,13 +37,15 @@
 					background-size cover
 					line-height 1
 					hide-text()
-
-
-
-		.breadcrumb_last
+		span,
+		strong
 			color #7f7f7f
-			font-size 14px
-			line-height 1.4
-			text-decoration none
+			&.breadcrumb_last
+				color #7f7f7f
+				font-size 14px
+				line-height 1.4
+				text-decoration none
+				+r($t)
+					font-size 12px
 
 

@@ -1,0 +1,168 @@
+.card
+	display block
+	&__in
+		padding-top 70px
+		padding-bottom 70px
+		+r($l)
+			padding-top 44px
+			padding-bottom 44px
+		+r($t)
+			padding-top 27px
+			padding-bottom 27px
+	&__title
+		margin-top 0
+		margin-bottom 50px
+		@extends .title
+		text-align center
+		+r($l)
+			margin-bottom 34px
+		+r(t)
+			margin-bottom 22px
+	// &__row
+
+	// &__col
+
+	&__slider-w
+		margin-bottom ($cardVerticalRhythm)px
+		overflow hidden
+		+r($t)
+			margin-bottom ($cardVerticalRhythm / 2)px
+	&__slider
+		margin-bottom 15px
+		font-size 0
+		height 360px
+		overflow hidden
+	&__slider-item
+		width 100%
+		display inline-block
+		vertical-align top
+		cursor pointer
+	&__slider-image
+		position relative
+		width 100%
+		height 360px
+		border 2px solid #eeeeee
+		background-color #ffffff
+		img
+			position absolute
+			top 50%
+			left 50%
+			display block
+			max-width 100%
+			height auto
+			transform translate(-50%, -50%)
+	&__thumbs
+		margin-left -15px
+		font-size 0
+		// .slick-list
+		// 	margin-left -15px
+		// .slick-slide
+		// 	margin-left 15px
+		+r($t)
+			margin-left 0
+		.slick-current
+			.card__thumbs-img
+				border 2px solid #4cbaba
+		// .slick-slide
+		// 	&:hover
+		// 		.card__thumbs-img
+		// 			border 2px solid #4cbaba
+	&__thumbs-item
+		margin-left 15px
+		display inline-block
+		vertical-align top
+		cursor pointer
+		&:last-child
+			margin-right 0
+		+r($t)
+			margin-left 0
+	&__thumbs-img
+		position relative
+		max-width 110px
+		height 110px
+		border 2px solid #eeeeee
+		background-color #ffffff
+		tr(all .3s ease)
+		+r($d)
+			max-width 88px
+		+r($l)
+			max-width 94%
+		+r($t)
+			margin auto
+			max-width 80%
+		img
+			position absolute
+			top 50%
+			left 50%
+			display block
+			max-width 100%
+			height auto
+			transform translate(-50%, -50%)
+	&__discount
+		margin-bottom ($cardVerticalRhythm)px
+		+r($t)
+			margin-bottom ($cardVerticalRhythm / 2)px
+	// &__tabs
+
+	&__tabs-nav
+		margin-bottom ($cardVerticalRhythm)px
+		+r($t)
+			margin-bottom ($cardVerticalRhythm / 2)px
+	&__table
+		margin-bottom ($cardVerticalRhythm)px
+		+r($t)
+			margin-bottom ($cardVerticalRhythm / 2)px
+	&__actions
+		text-align left
+		clr()
+	&__print,
+	&__download,
+	&__button
+		display inline-block
+		vertical-align middle
+	&__button
+		float right
+		+r($t)
+			display block
+			width 56%
+			font-size 14px
+			white-space nowrap
+			padding-top 12px
+			padding-right 5px
+			padding-bottom 10px
+			padding-left 5px
+	&__print,
+	&__download
+		margin-right 10px
+		padding-top 18px
+		padding-right 18px
+		padding-bottom 18px
+		padding-left 18px
+		width 60px
+		height 60px
+		background-color #eeeeee
+		text-indent -9999px
+		border-radius 5px
+		tr(all .3s ease)
+		+r($t)
+			margin-bottom 10px
+			padding-top 6px
+			padding-right 10px
+			padding-bottom 6px
+			padding-left 10px
+			width 44px
+			height 38px
+
+		&:hover
+			background-color darken(#eeeeee, 10)
+		&:last-child
+			margin-right 0
+
+	&__print-icon,
+	&__download-icon
+		width 24px
+		height 22px
+		display block
+		fill #4cbaba
+	&__text
+		@extends .wysiwyg

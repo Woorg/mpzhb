@@ -11,7 +11,9 @@
 		+r($l)
 			text-align center
 		+r($m)
+			padding-bottom 4px
 			text-align left
+			line-height 1
 	&__time,
 	&__phone,
 	&__bid,
@@ -30,12 +32,25 @@
 			margin-right 30px
 		+r($m)
 			margin-right 0
-			text-align left
+			margin-bottom 4px
+			vertical-align top
+			width 50%
+			font-size 11px
+			line-height 1
+			text-align center
 	&__time,
 	&__phone
 		margin-right 30px
 		&:last-child
 			margin-right 0
+		+r($m)
+			width 48%
+			margin-right 0
+			text-align left
+			line-height 1
+	&__time
+		&:hover
+			text-decoration none
 	&__time-icon,
 	&__phone-icon,
 	&__bid-icon,
