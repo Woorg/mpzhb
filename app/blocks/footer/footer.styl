@@ -7,8 +7,14 @@
 		+r($l)
 			padding-top 46px
 			padding-bottom 39px
+		+r($m)
+			padding-top 40px
+			padding-bottom 40px
 	&__col
 		margin-bottom 50px
+		&:last-child
+			+r($m)
+				margin-bottom 0
 	&__in
 		clr()
 	&__bottom
@@ -18,9 +24,11 @@
 	&__copyright
 		font-size 14px
 		line-height 37px
+		+r($m)
+			line-height 23px
 		a
 			color #292929
-			text-decoration underline
+			text-decoration none
 			&:hover
 				color #292929
 				text-decoration none
