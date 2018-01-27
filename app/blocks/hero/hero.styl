@@ -14,6 +14,8 @@
 			color #4cbaba
 		+r($l)
 			font-size 50px
+		+r($tL)
+			font-size 31px
 		+r($t)
 			font-size 31px
 		+r($m)
@@ -27,6 +29,10 @@
 		+r($l)
 			font-size 22px
 			line-height 29px
+		+r($tL)
+			font-size 14px
+			line-height 18px
+
 		+r($t)
 			font-size 14px
 			line-height 18px
@@ -36,21 +42,28 @@
 	&__item
 		background-size cover
 		object-fit cover
-		min-height 760px
+		height 760px
 		+r($l)
-			min-height 475px
+			height 475px
+		+r($tL)
+			height 475px
 	&__in
 		position relative
-		min-height 760px
+		height 760px
 		text-align center
 		+r($l)
-			min-height 475px
+			height 475px
+		+r($tL)
+			height 475px
 	&__item-w
 		position absolute
 		top 50%
 		left 50%
 		width 100%
 		transform translate(-50%, calc(-50% - 12px))
+		+r($m)
+			padding-left 10px
+			padding-right 10px
 	.slick-arrow
 		z-index 1
 		width 40px

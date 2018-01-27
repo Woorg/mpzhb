@@ -7,8 +7,8 @@
 			padding-top 44px
 			padding-bottom 44px
 		+r($t)
-			padding-top 22px
-			padding-bottom 22px
+			padding-top 40px
+			padding-bottom 40px
 	&__title
 		margin-bottom 50px
 		@extends .title
@@ -28,8 +28,15 @@
 		width ratio-percentage(360,1170)
 		display inline-block
 		vertical-align top
+		&:last-child
+			.products__item-title
+				+r($m)
+					margin-bottom 0
 		+r($l)
 			width 47.4%
+		+r($m)
+			margin-right 0
+			width 100%
 	&__link
 		display block
 		text-decoration none
@@ -51,3 +58,5 @@
 		+r($l)
 			font-size 14px
 			line-height 18px
+		+r($m)
+			margin-bottom 31px

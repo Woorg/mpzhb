@@ -1,8 +1,56 @@
 .nav
 	display inline-block
 	vertical-align middle
+	+r($m)
+		display block
+	&__trigger
+		border 1px solid #404040
+		margin-bottom 10px
+		padding-top 5px
+		padding-right 20px
+		padding-bottom 6px
+		padding-left 20px
+		display none
+		font-size 14px
+		color #292929
+		text-transform uppercase
+		text-align left
+		cursor pointer
+		border-radius 5px
+		clr()
+		+r($m)
+			display block
+	&__trigger-text,
+	&__trigger-icon
+		display inline-block
+		vertical-align middle
+	&__trigger-text
+		margin-right 5px
+	&__trigger-icon
+		margin-top 5px
+		float right
+		width 12px
+		height 14px
+		fill #292929
+	&__checkbox
+		display none
+		+r($m)
+			&:checked +
+				.nav__list
+					display block
+					.nav__item,
+					.nav li
+						display block
+						text-align center
+					.nav__link,
+					.nav a
+						padding-left 0
+						padding-right 0
 	&__list
+
 		font-size 0
+		+r($m)
+			display none
 	&__item,
 	li
 		display inline-block
@@ -22,6 +70,8 @@
 		font-size 18px
 		text-decoration none
 		text-transform uppercase
+		&:hover
+			color #4CBABA
 		+r($t)
 			padding-top 10px
 			padding-right 10px
@@ -36,6 +86,10 @@
 		fill #292929
 		+r($m)
 			margin-left 0
+
+
+
+
 .nav_second
 	.nav__title
 		margin-bottom 30px
@@ -43,6 +97,9 @@
 		font-size 18px
 		line-height 22px
 		text-transform uppercase
+	.nav__list
+		+r($m)
+			display block
 	.nav__item,
 	li
 		margin-bottom 14px
@@ -55,6 +112,7 @@
 		color #7f7f7f
 		line-height 21px
 		text-transform none
+		text-decoration none
 		&:hover
 			text-decoration none
 
@@ -74,6 +132,8 @@
 		font-size 0
 		white-space nowrap
 		text-align center
+		+r($m)
+			display block
 	.nav__item
 		display inline-block
 		vertical-align top

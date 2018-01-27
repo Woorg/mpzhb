@@ -26,6 +26,10 @@ mixin header()
 			.container.header__in
 				a.header__logo.logo(href="#") Моспромжелезобетон
 				nav.header__nav.nav
+					label.nav__trigger(for="navTrigger")
+						.nav__trigger-text Меню
+						+icon('bars', true).nav__trigger-icon
+					input#navTrigger.nav__checkbox(type="checkbox")
 					ul.nav__list
 						li.nav__item
 							a.nav__link(href="#") Продукция

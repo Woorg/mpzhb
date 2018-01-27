@@ -11,9 +11,10 @@
 		+r($l)
 			text-align left
 		+r($m)
-			padding-bottom 4px
+			padding-bottom 12px
+			min-height auto
 			line-height 1
-
+			text-align center
 	&__time,
 	&__phone,
 	&__bid,
@@ -25,13 +26,14 @@
 		text-decoration none
 		font-size 14px
 		&:hover
-			color #7f7f7f
-			text-decoration underline
+			color #4cbaba
+			text-decoration none
 		+r($d)
 			margin-bottom 6px
 			margin-right 30px
 		+r($m)
-			margin-bottom 4px
+			margin-right 0
+			margin-bottom 0
 			font-size 11px
 			text-align left
 	&__time,
@@ -39,7 +41,8 @@
 		margin-right 30px
 		&:last-child
 			margin-right 0
-
+		+r($m)
+			margin-right 0
 	&__time
 		&:hover
 			text-decoration none
@@ -70,9 +73,10 @@
 		+r($t)
 			text-align-last center
 		+r($m)
-			padding-top 0
-			text-align left
-			text-align-last left
+			// padding-top 0
+			display none
+			// text-align left
+			// text-align-last left
 	&__body
 		padding-top 34px
 		padding-bottom 35px
