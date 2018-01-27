@@ -26,7 +26,7 @@
 		margin-right -30px
 		margin-right ratio-percentage(-30,1170)
 		+r($m)
-			margin-right -30px
+			margin-right 0
 	&__item
 		margin-right 30px
 		margin-right ratio-percentage(30,1170)
@@ -36,6 +36,9 @@
 		height 262px
 		display inline-block
 		vertical-align top
+		&:nth-child(2n)
+			+r($m)
+				margin-right 0
 		+r($l)
 			height 164px
 		+r($t)
@@ -43,8 +46,8 @@
 			height 262px
 		+r($m)
 			margin-right 30px
-			width 39%
-			height 92px
+			width 44.8%
+			height 102px
 			overflow hidden
 	&__link
 		position relative
