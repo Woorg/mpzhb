@@ -9,15 +9,14 @@ include /blocks/advantages/advantages
 include /blocks/footer/footer
 
 block head
-	- var pageTitle = 'Истрия завода - Моспромжелезобетон';
+	- var pageTitle = 'Новости - Моспромжелезобетон';
 
 block content
 	+header()
-	+breadcrumbs-objects()
+	+breadcrumbs-news()
 	main.main
 		.main__in.container
-			.main__title Наши объекты
+			.main__title Новости
 
-		+objects-full()
 	//- +advantages-third()
 	+footer()
