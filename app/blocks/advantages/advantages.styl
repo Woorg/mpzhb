@@ -32,7 +32,10 @@
 		&:last-child
 			margin-bottom 0
 
-.advantages_second
+.advantages_second,
+.advantages_third
+	margin-left 0
+	margin-right 0
 	padding-left 0
 	display block
 	background #eeeeee
@@ -46,7 +49,10 @@
 		margin-bottom 43px
 		@extends .title
 		text-align center
+		font-family $mM
+		font-weight normal
 	.advantages__list
+		margin-bottom 0
 		clr()
 	.advantages__item
 		padding-left 0
@@ -95,3 +101,49 @@
 		letter-spacing tracking(-25, 18)
 	.advantages__item-text
 		letter-spacing tracking(-25, 16)
+
+
+.advantages_third
+	margin-left 0
+	margin-right 0
+	overflow hidden
+	.advantages__item
+		padding-left 20px
+		padding-right 20px
+		text-align center
+		&:after
+			display none
+	.advantages__link
+		padding-left 0
+	.advantages__icon
+		position absolute
+		z-index 1
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+	.advantages__icon-w
+		position relative
+		margin auto
+		margin-bottom 20px
+		width 98px
+		height 98px
+		background-color #ffffff
+		content ""
+		border-radius 50%
+	.advantages__item_first
+		.advantages__icon
+			top 50%
+			left 50%
+			retinaSprite($advantages_4_group)
+	.advantages__item_second
+		.advantages__icon
+			top 50%
+			left 50%
+			width 37px
+			height 50px
+	.advantages__item_third
+		.advantages__icon
+			top 50%
+			left 50%
+			retinaSprite($advantages_5_group)
+

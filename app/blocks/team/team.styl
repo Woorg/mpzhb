@@ -1,0 +1,72 @@
+.team
+	&__title
+		margin-bottom 30px
+		@extends .subtitle
+	&__tabs-nav
+		margin-bottom 30px
+	&__list
+		margin-right -30px
+		margin-bottom 0
+		display flex
+		flex-wrap wrap
+		flex-grow 1
+		justify-content flex-start
+		+r($l)
+			margin-right 0
+			justify-content center
+
+	&__item
+		margin-right 30px
+		margin-bottom 30px
+		width 230px
+		+r($l)
+			margin-right 0
+			width auto
+		+r($t)
+			margin-right 0
+			width auto
+	&__image
+		margin-bottom 15px
+		width 230px
+		height 230px
+		display block
+		+r($l)
+			// width 100%
+			width auto
+			height auto
+			min-height 230px
+	&__name
+		margin-bottom 2px
+	&__position
+		margin-bottom 2px
+		color #7f7f7f
+		font-size 14px
+
+	&__phone,
+	&__mail
+		position relative
+		padding-left 24px
+		display block
+		color #292929
+		&:hover
+			color #292929
+			text-decoration none
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ""
+			transform translateY(-50%)
+	&__phone
+		text-decoration none
+		&:after
+			width 14px
+			height 14px
+			background url('../images/general/phone.svg') 0 0 / cover no-repeat
+	&__mail
+		text-decoration underline
+		&:after
+			width 16px
+			height 14px
+			background url('../images/general/mail.svg') 0 0 / cover no-repeat
+

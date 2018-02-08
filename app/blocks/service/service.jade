@@ -1,123 +1,274 @@
 include ../form/form
+include ../examples/examples
+
 
 mixin service()
 	.service&attributes(attributes)
-		.service__in.container
-			h1.service__title Доставка продукции авто и ж/д транспортом
-			nav.service__nav.nav.nav_third
-				ul.nav__list
-					li.nav__item.nav__item_active
-						a.nav__link(href="#link") Автотранспорт
-					li.nav__item
-						a.nav__link(href="#link") ж/д транспорт
+		.service__tabs.tabs
+			ul.tabs__nav.service__tabs-nav
+				li.tabs__item.tabs__item_active
+					a.tabs__link(href="#tab-1") Автотранспорт
+				li.tabs__item
+					a.tabs__link(href="#tab-2") ж/д транспорт
+
 			.service__text
 				p ОАО «Моспромжелезобетон» осуществляет централизованную доставку ЖБИ и товарного бетона в пределах Москвы и Московской области. Доставка ЖБИ - железобетонных изделий осуществляется на 20-30 тонных полуприцепах с открытым кузовом (бортовая).
-			.service__row.row
+			#tab-1.tabs__tab.tabs__tab_active
+
+				.service__row.row
+					.service__col.col-md-8
+						.service__row
+							h2.service__subtitle ЖБИ
+
+							table.table.table_second.service__table
+								thead
+									tr
+										th №
+										th Спецификация груза
+										th Грузоподъем ность, тн
+										th Стоимость в руб. с НДС за рейс
+										th Базовый пробег, км
+										th Свыше базового пробега за 1 км
+								tbody
+									tr
+										td 1
+										td Бортовой полуприцеп
+										td 20
+										td 5 350
+										td 30
+										td 75
+									tr
+										td 2
+										td Бортовой полуприцеп
+										td 30
+										td 7 200
+										td 30
+										td 75
+									tr
+										td 3
+										td Бортовая
+										td 14
+										td 6 000
+										td 30
+										td 75
+									tr
+										td 4
+										td Груз шириной от 2,5 до 3,5
+										td 20
+										td 10 000
+										td 80
+										td 60
+									tr
+										td 5
+										td Груз шириной от 2,5 до 3,5
+										td 30
+										td 15 000
+										td 80
+										td 60
+									tr
+										td 6
+										td Груз шириной от 3,5 до 4,0
+										td 20
+										td 15 000
+										td 80
+										td 90
+									tr
+										td 7
+										td Груз шириной от 3,5 до 4,0
+										td 30
+										td 15 000
+										td 80
+										td 60
+									tr
+										td 8
+										td Груз шириной от 4,0
+										td 23
+										td 15 000
+										td 80
+										td 90
+									tr
+										td 9
+										td Груз шириной от 4,0
+										td 30
+										td 20 000
+										td 80
+										td 60
+
+						.service__row
+							h2.service__subtitle Бетон
+
+							table.table.table_third.service__table
+								thead
+									tr
+										th Расстояние перевозки, км
+										th Цена за 1 м3 с НДС — 18% на перевозку автобетоносмесителями, руб *
+								tbody
+									tr
+										td 0-5
+										td 230
+									tr
+										td 6-10
+										td 230
+									tr
+										td 11-15
+										td 260
+
+							.service__note
+								p * Стоимость доставки бетона и раствора автобетоносмесителями на расстояние превышающее 30 км — договорная
+
+
+					.service__col.service__col_form.col-md-4
+						+form().service__form
+
+			#tab-2.tabs__tab
 				.service__col.col-md-8
 					.service__row
-						h2.service__subtitle ЖБИ
+						h2.service__subtitle Полувагон
+						.service__type
+							.service__type-img
+								img(src="assets/images/content/transport-img-1.jpg", alt="Полувагон")
+							.service__type-w
+								a.service__type-title(href="#") Расчет ж/д тарифа
+								.service__type-text Расчет ж/д тарифа производится на сайте системы «Успех». Система не расчитывает стоимость пробега порожнего вагона, маршрутной доставки грузов и перевозки грузов большой скоростью.
 
-						table.table.table_second.service__table
-							thead
-								tr
-									th №
-									th Спецификация груза
-									th Грузоподъем ность, тн
-									th Стоимость в руб. с НДС за рейс
-									th Базовый пробег, км
-									th Свыше базового пробега за 1 км
-							tbody
-								tr
-									td 1
-									td Бортовой полуприцеп
-									td 20
-									td 5 350
-									td 30
-									td 75
-								tr
-									td 2
-									td Бортовой полуприцеп
-									td 30
-									td 7 200
-									td 30
-									td 75
-								tr
-									td 3
-									td Бортовая
-									td 14
-									td 6 000
-									td 30
-									td 75
-								tr
-									td 4
-									td Груз шириной от 2,5 до 3,5
-									td 20
-									td 10 000
-									td 80
-									td 60
-								tr
-									td 5
-									td Груз шириной от 2,5 до 3,5
-									td 30
-									td 15 000
-									td 80
-									td 60
-								tr
-									td 6
-									td Груз шириной от 3,5 до 4,0
-									td 20
-									td 15 000
-									td 80
-									td 90
-								tr
-									td 7
-									td Груз шириной от 3,5 до 4,0
-									td 30
-									td 15 000
-									td 80
-									td 60
-								tr
-									td 8
-									td Груз шириной от 4,0
-									td 23
-									td 15 000
-									td 80
-									td 90
-								tr
-									td 9
-									td Груз шириной от 4,0
-									td 30
-									td 20 000
-									td 80
-									td 60
+						dl.service__specs
+							.service__specs-item
+								dt.service__specs-term Грузоподъемность, т
+								dd.service__specs-desc 70
+							.service__specs-item
+								dt.service__specs-term Масса тары вагона, т
+								dd.service__specs-desc 24
+							.service__specs-item
+								dt.service__specs-term Осевая нагрузка, тс
+								dd.service__specs-desc 23,5
+							.service__specs-item
+								dt.service__specs-term База вагона, мм
+								dd.service__specs-desc 8650
+
+							.service__specs-item
+								dt.service__specs-term <strong>Длина, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term по осям сцепления автосцепок
+								dd.service__specs-desc 13920
+							.service__specs-item
+								dt.service__specs-term по концевым балкам рамы
+								dd.service__specs-desc 3800
+							.service__specs-item
+								dt.service__specs-term Высота от УГР макс, мм
+								dd.service__specs-desc 243 (330)
+							.service__specs-item
+								dt.service__specs-term Высота от УГР до нижней обвязки, мм
+								dd.service__specs-desc 1450
+							.service__specs-item
+								dt.service__specs-term Объем кузова, м3
+								dd.service__specs-desc 88
+
+							.service__specs-item
+								dt.service__specs-term <strong>Внутренние размеры кузова, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term ширина
+								dd.service__specs-desc 2911
+							.service__specs-item
+								dt.service__specs-term длина
+								dd.service__specs-desc 12750
+							.service__specs-item
+								dt.service__specs-term высота
+								dd.service__specs-desc 12750
+							.service__specs-item
+								dt.service__specs-term Площадь пола, м3
+								dd.service__specs-desc 37,125
+							.service__specs-item
+								dt.service__specs-term Количество разгрузочных люков
+								dd.service__specs-desc 14
+
 					.service__row
-						h2.service__subtitle Бетон
+						h2.service__subtitle Платформа
 
-						table.table.table_third.service__table
-							thead
-								tr
-									th Расстояние перевозки, км
-									th Цена за 1 м3 с НДС — 18% на перевозку автобетоносмесителями, руб *
-							tbody
-								tr
-									td 0-5
-									td 230
-								tr
-									td 6-10
-									td 230
-								tr
-									td 11-15
-									td 260
+						.service__type
+							.service__type-img
+								img(src="assets/images/content/transport-img-2.jpg", alt="Платформа")
+							.service__type-w
+								a.service__type-title(href="#") Расчет ж/д тарифа
+								.service__type-text Расчет ж/д тарифа производится на сайте системы «Успех». Система не расчитывает стоимость пробега порожнего вагона, маршрутной доставки грузов и перевозки грузов большой скоростью.
 
-						.service__note
-							p * Стоимость доставки бетона и раствора автобетоносмесителями на расстояние превышающее 30 км — договорная
+						dl.service__specs
+							.service__specs-item
+								dt.service__specs-term Грузоподъемность, т
+								dd.service__specs-desc 71
+							.service__specs-item
+								dt.service__specs-term Масса тары вагона, т
+								dd.service__specs-desc 21,4
+							.service__specs-item
+								dt.service__specs-term Осевая нагрузка, тс
+								dd.service__specs-desc 23,25
+							.service__specs-item
+								dt.service__specs-term База вагона, мм
+								dd.service__specs-desc 9720
+
+							.service__specs-item
+								dt.service__specs-term <strong>Длина, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term по осям сцепления автосцепок
+								dd.service__specs-desc 14620
+							.service__specs-item
+								dt.service__specs-term по концевым балкам рамы
+								dd.service__specs-desc 13400
+							.service__specs-item
+								dt.service__specs-term Высота от УГР макс, мм
+								dd.service__specs-desc 1820
+							.service__specs-item
+								dt.service__specs-term Высота от УГР до нижней обвязки, мм
+								dd.service__specs-desc 1310
+
+							.service__specs-item
+								dt.service__specs-term <strong>Внутренние размеры кузова, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term ширина
+								dd.service__specs-desc 2770
+							.service__specs-item
+								dt.service__specs-term длина
+								dd.service__specs-desc 13300
+							.service__specs-item
+								dt.service__specs-term Площадь пола, м2
+								dd.service__specs-desc 36,8
+
+							.service__specs-item
+								dt.service__specs-term <strong>Размер пола с открытыми бортами, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term длина
+								dd.service__specs-desc 13400
+							.service__specs-item
+								dt.service__specs-term ширина
+								dd.service__specs-desc 2870
+
+							.service__specs-item
+								dt.service__specs-term <strong>Высота бортов, мм:</strong>
+								dd.service__specs-desc
+							.service__specs-item
+								dt.service__specs-term продольный
+								dd.service__specs-desc 500
+							.service__specs-item
+								dt.service__specs-term торцевой
+								dd.service__specs-desc 400
+
+						.service__requisites
+							h2.service__requisites-title Железнодорожные реквизиты
+							ul.service__requisites-list
+								li.service__requisites-item Код станции № 199208
+								li.service__requisites-item Код предприятия № 3025
 
 
 				.service__col.col-md-4
 					+form().service__form
 
 
-mixin service-2()
+
+//- mixin service-2()
 	.service&attributes(attributes)
 		.service__in.container
 			h1.service__title Доставка продукции авто и ж/д транспортом
@@ -274,3 +425,413 @@ mixin service-2()
 
 				.service__col.col-md-4
 					+form().service__form
+
+
+mixin service-3()
+	.service&attributes(attributes)
+		//- h1.service__title Изготовление металлоконструкций по индивидуальным размерам
+		.service__tabs.tabs
+			ul.tabs__nav.service__tabs-nav
+				li.tabs__item.tabs__item_active
+					a.tabs__link(href="#tab-1") Возможности
+				li.tabs__item
+					a.tabs__link(href="#tab-2") Цены
+			#tab-1.tabs__tab.tabs__tab_active
+				.service__row.row
+					.service__col.col-md-8
+						.service__row
+							h2.service__subtitle Выпускаем арматурные каркасы и сетки различного назначения
+
+							.service__text
+								p ОАО «Моспромжелезобетон» специализируется на выпуске арматурных каркасов и сеток различного назначения диаметром от 4 до 32 мм для гражданского, промышленного, жилищного и монолитного строительства. Качество нашей продукции опирается на 30-ти летний опыт работы в данной сфере. Производственные возможности позволяют переработать и произвести высококачественной арматурной продукции 3000 тонн в месяц.
+
+								p Каркасы и сетки изготавливаются на новейшем оборудовани: «KOCH», «JAGER», «WAFIOUS» и др. Предприятие освоило производство арматурных изделий из стали В500С, а так же готово производить изделия из материала заказчика. ОАО «Моспромжелезобетон» готово принять участие в тендерах на изготовление каркасов любой сложности по предъявленным чертежам.
+
+								p Завод имеет собственную лабораторию, полностью соответствующую требованиям ГОСТ Р ИСО МЭК 17025 св. №300.307 от 24.12.13. Наша лаборатория проводит любые испытания и выдает сертификаты качества.
+
+						.service__row
+							h2.service__subtitle Примеры работ
+							+examples()
+
+			#tab-2.tabs__tab
+				.service__row.row
+					.service__col.col-md-8
+						table.table.table_second.service__table
+							thead
+								tr
+									th Размеры, м
+									th Сварная металлическая сетка (Кладочная), кг/м2
+									th Арматурная сетка, кг/м2
+									th Арматурная сетка (оцинкованная), кг/м2
+							tbody
+								tr
+									td 50х50х3
+									td 2,2
+									td 2,2
+									td 2,45
+								tr
+									td 50х50х4
+									td 3,95
+									td 3,95
+									td 4,23
+								tr
+									td 50х50х5
+									td 6,5
+									td 6,5
+									td 6,79
+								tr
+									td 100х100х3
+									td 1,2
+									td 1,2
+									td 1,4
+								tr
+									td 100х100х4
+									td 1,9
+									td 1,9
+									td 2,2
+								tr
+									td 100х100х5
+									td 3,1
+									td 3,1
+									td 3,4
+								tr
+									td 100х100х6
+									td 4,5
+									td 4,5
+									td 4,89
+								tr
+									td 100х100х8
+									td 8,2
+									td 8,2
+									td 8,72
+								tr
+									td 100х100х10
+									td 12,4
+									td 12,4
+									td 12,86
+								tr
+									td 100х100х12
+									td 18,1
+									td 18,1
+									td 19,2
+
+								tr
+									td 100х100х14
+									td 24,5
+									td 24,5
+									td 25,5
+								tr
+									td 100х100х16
+									td 32
+									td 32
+									td 33,1
+								tr
+									td 100х100х18
+									td 40,5
+									td 40,5
+									td 42
+								tr
+									td 150х150х4
+									td 1,4
+									td 1,4
+									td 1,7
+								tr
+									td 150х150х5
+									td 2,1
+									td 2,1
+									td 2,4
+								tr
+									td 150х150х6
+									td 3,1
+									td 3,1
+									td 3,5
+								tr
+									td 150х150х8
+									td 5,8
+									td 5,8
+									td 6,2
+								tr
+									td 150х150х10
+									td 8,7
+									td 8,7
+									td 9,4
+								tr
+									td 150х150х12
+									td 12,85
+									td 12,85
+									td 13,82
+								tr
+									td 150х150х14
+									td 17
+									td 17
+									td 18
+								tr
+									td 150х150х16
+									td 22,7
+									td 22,7
+									td 23,5
+								tr
+									td 150х150х18
+									td 28
+									td 28
+									td 29,4
+								tr
+									td 200х200х4
+									td 1,1
+									td 1,1
+									td 1,45
+								tr
+									td 200х200х5
+									td 1,75
+									td 1,75
+									td 2,1
+								tr
+									td 200х200х6
+									td 2,5
+									td 2,5
+									td 3
+								tr
+									td 200х200х8
+									td 4,07
+									td 4,07
+									td 4,77
+
+								tr
+									td 200х200х10
+									td 6,5
+									td 6,5
+									td 7,2
+								tr
+									td 200х200х12
+									td 8,6
+									td 8,6
+									td 9,6
+								tr
+									td 200х200х14
+									td 12,5
+									td 12,5
+									td 13,4
+								tr
+									td 200х200х16
+									td 16
+									td 16
+									td 17
+								tr
+									td 200х200х18
+									td 20
+									td 20
+									td 21
+								tr
+									td 300х300х6
+									td 1,4
+									td 1,4
+									td 1,7
+								tr
+									td 300х300х8
+									td 2,5
+									td 2,5
+									td 2,9
+								tr
+									td 300х300х10
+									td 3,8
+									td 3,8
+									td 4,2
+								tr
+									td 300х300х12
+									td 5,5
+									td 5,5
+									td 5,9
+								tr
+									td 300х300х14
+									td 7,4
+									td 7,4
+									td 4,2
+								tr
+									td 300х300х16
+									td 9,6
+									td 9,6
+									td 7,4
+								tr
+									td 300х300х16
+									td 9,6
+									td 9,6
+									td 10
+
+
+			.service__col.service__col_form.col-md-4
+				+form().service__form
+
+
+mixin service-4()
+	.service&attributes(attributes)
+		//- h1.service__title Услуги лаборатории
+		.service__tabs.tabs
+			ul.tabs__nav.service__tabs-nav
+				li.tabs__item.tabs__item_active
+					a.tabs__link(href="#tab-1") Возможности
+				li.tabs__item
+					a.tabs__link(href="#tab-2") Цены
+				li.tabs__item
+					a.tabs__link(href="#tab-3") Сертификат
+			#tab-1.tabs__tab.tabs__tab_active
+				.service__row.row
+					.service__col.col-md-8
+						.service__row
+							//- h2.service__subtitle Испытания материалов для производства
+							.service__text
+								h2 Испытания материалов для производства
+
+								p Производственная строительная лаборатория в составе ОАО «Моспромжелезобетон» выполняет физико-механические испытания материалов для производства железобетонных изделий, бетонных растворных смесей:
+
+								ul.list.list_style-second
+									li цемент
+									li песок
+									li щебень
+									li арматурная сталь
+									li сварные соединения
+
+								h2 Другие виды испытаний
+
+								ul.list.list_style-second
+									li Контроль прочности железобетонных изделий неразрушающим способом упругого отскока
+									li Определение прочности бетона на сжатие по контрольным образцам
+									li Определение марки бетона по морозостойкости
+									li Определение марки по водонепроницаемости
+
+								h2 Услуги проектирования
+
+								ul.list.list_style-second
+									li Проектирование составов бетонов и растворов
+									li Назначение и корректировка рабочих составов с учетом экономических требований проекта
+
+
+			#tab-2.tabs__tab
+				.service__row.row
+					.service__col.col-md-8
+						h2.service__subtitle Испытания монолитных бетонных конструкций
+						table.table.table_second.service__table
+							thead
+								tr
+									th Виды испытаний
+									th Примерная стоимость, руб.
+							tbody
+								tr
+									td Определение прочности бетона в изделиях и конструкциях ударного импульса по ГОСТ 22690 (1 участок)
+									td 680
+								tr
+									td Местный прогрев участка бетона испытываемой конструкции (1 участок)
+									td 130
+								tr
+									td Шлифовка бетона конструкции (1 участок)
+									td 100
+								tr
+									td Испытание образцов, отобранных из конструкции
+									td 1 320
+								tr
+									td Определение морозостойкости бетона по ГОСТ 10060
+									td 9 120
+								tr
+									td Определение водопроницаемости бетона ускоренным методом (прибор АГАМА)
+									td 7 800
+
+						h2.service__subtitle Исследование характеристик бетона, раствора, материалов
+
+						table.table.table_second.service__table
+							thead
+								tr
+									th Виды испытаний
+									th Примерная стоимость, руб.
+							tbody
+								tr
+									td Определение класса бетона (марки раствора) по прочности (серия) из 3 образцов-кубов Размеры: 7,07х7,07 Размеры: 10х10
+									td 896
+								tr
+									td Кирпич строительный, камни и блоки стеновые. Определение прочности раствора, взятого из швов кирпичной кладки по ГОСТ 5802 (1 проба - 5 образцов с ребром 2-4 см)
+									td 4 256
+								tr
+									td Предел прочности при изгибе и сжатии по ГОСТ 8462-85
+									td 3 136
+								tr
+									td Определение марки камней и блоков по прочности на сжатие
+									td 2 072
+								tr
+									td Определение предела прочности кирпича, взятого из кирпичной кладки
+									td 896
+								tr
+									td Определение предела прочности кирпича в кладке методом ударного импульса по ГОСТ 22690
+									td 896
+
+						h2.service__subtitle Входной контроль материалов
+
+						table.table.table_second.service__table
+							thead
+								tr
+									th Виды испытаний
+									th Примерная стоимость, руб.
+
+							tbody
+								tr
+									td Испытание щебня по ГОСТ 8269 (1 проба)
+									td 2 700
+								tr
+									td Влажность
+									td 320
+								tr
+									td Определение дробимости
+									td 1400
+								tr
+									td Испытание песка по ГОСТ 8735 (1 проба)
+									td 2 800
+
+						h2.service__subtitle Испытание бетонной смеси
+
+						table.table.table_second.service__table
+							thead
+								tr
+									th Виды испытаний
+									th Примерная стоимость, руб.
+
+							tbody
+								tr
+									td Подвижность
+									td 672
+								tr
+									td Плотность
+									td 672
+
+						h2.service__subtitle Испытание растворной смеси
+
+						table.table.table_second.service__table
+							thead
+								tr
+									th Виды испытаний
+									th Примерная стоимость, руб.
+
+							tbody
+								tr
+									td Подвижность
+									td 672
+								tr
+									td Плотность
+									td 672
+
+
+			#tab-3.tabs__tab
+				.service__row.row
+					.service__col.col-md-8
+
+						.service__text
+							h2 Свидетельство об аттестации
+							p Производственная строительная лаборатория в составе ОАО «Моспромжелезобетон» имеет Свидетельство об атестации №300.307 (Действительно до 24.12.13.), выданное Федерельным государственным унитарным предприятием «ВНИИФТРИ», которое удостоверяет, что лаборатория соответствует требованиям ГОСТ Р ИСО-МЭК 17025  к испытательным лабораториям и аттестована на техническую компетентность при проведении испытаний и контроле качества строительной продукции в соответствии с областью аттестации.
+
+							a.service__sertificate(href="assets/images/content/certificate.jpg", title="Свидетельство об аттестации")
+								img(src="assets/images/content/certificate.jpg", alt="Свидетельство об аттестации")
+
+							h2 Другие заслуги
+
+							p Так же лаборатория включена в Реестр испытательных лабораторий, подтвердивших свою компетентность для участия в реализации Московских городских строительных программ.
+
+							p Производственная строительная лаборатория обеспечена необходимым испытательным оборудованием и средствами измерений, своевременно проходящим периодическую проверку. Лаборатория руководствуется в работе актуализированными действующими государственными стандартами, строительными нормами, правилами, и другой нормативной документацией. Штат лаборатории укомплектован квалифицированными кадрами с большим опытом работы.
+
+			.service__col.service__col_form.col-md-4
+				+form().service__form

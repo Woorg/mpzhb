@@ -2,17 +2,20 @@ extends /blocks/layout-default/layout-default
 
 include /blocks/header/header
 include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
 include /blocks/service/service
 include /blocks/advantages/advantages
 include /blocks/footer/footer
 
 block head
-	- var pageTitle = 'Доставка продукции авто и ж/д транспортом - Моспромжелезобетон';
+	- var pageTitle = 'Услуги лаборатории - Моспромжелезобетон';
 
 block content
 	+header()
-	+breadcrumbs-service-1()
+	+breadcrumbs-service-4()
 	main.main
-		+service-2()
-	+advantages-second()
+		.main__in.container
+			.main__title Услуги лаборатории
+			+service-4()
+	+advantages-third()
 	+footer()

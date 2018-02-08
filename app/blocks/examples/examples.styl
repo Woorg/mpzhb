@@ -1,0 +1,85 @@
+.examples
+	margin-bottom 30px
+	font-size 0
+	display flex
+	flex-wrap wrap
+	flex-grow 1
+	justify-content flex-start
+	+r($l)
+		margin-bottom 30px
+	&__item
+		width 33%
+		min-height 250px
+		+r($t)
+			width 50%
+			// height auto
+			min-height 250px
+		+r($m)
+			width 100%
+	&__link
+		position relative
+		height 100%
+		display block
+		text-decoration none
+		color #fff
+		cursor pointer
+		text-align center
+		tr(all .3s ease)
+		object-fit cover
+		background-size cover
+		&:after
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			// background #4cbaba
+			visibility hidden
+			opacity 0
+			background rgba(76, 186, 186,.8)
+			content ''
+			tr(all .3s ease)
+		&:hover
+			color #fff
+			text-decoration none
+			&:after
+				visibility visible
+				opacity 1
+			.examples__w
+				z-index 1
+				visibility visible
+				opacity 1
+			.examples__text
+				// text-decoration none
+				color #fff
+	&__w
+		position absolute
+		top 50%
+		left 50%
+		padding-right 50px
+		padding-left 50px
+		width 100%
+		transform translate(-50%, -50%)
+		visibility hidden
+		opacity 0
+		text-align center
+		tr(all .3s ease)
+	&__icon
+		margin-bottom 15px
+		display inline-block
+		vertical-align middle
+		retinaSprite($magnifying_glass_group)
+		+r($l)
+			margin-bottom 19px
+	&__text
+		margin-left -20px
+		margin-right -20px
+		font-family $mM
+		font-weight normal
+		font-size 14px
+		line-height 1.5
+		text-transform uppercase
+		text-decoration underline
+		+r($l)
+			font-size 14px
+			line-height 18px

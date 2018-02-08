@@ -1,8 +1,15 @@
 .service
-	display block
 	&__in
 		padding-top 70px
 		padding-bottom 70px
+	&__col_form
+		position absolute
+		top 70px
+		right 0
+		+r($l)
+			position static
+	&__row
+		position relative
 	&__title
 		margin-bottom 50px
 		@extends .title
@@ -15,6 +22,13 @@
 		margin-bottom 33px
 		+r($t)
 			margin-bottom (33 / 2)px
+	&__tabs
+		position relative
+	&__tabs-nav
+		margin-bottom 33px
+		text-align center
+		+r($t)
+			margin-bottom (33 / 2)px
 
 	&__text
 		margin-bottom 44px
@@ -22,8 +36,9 @@
 		+r($t)
 			margin-bottom (44 / 2)px
 	&__subtitle
-		margin-bottom 20px
+		margin-bottom 30px
 		@extends .subtitle
+		line-height 1.375
 		+r($t)
 			margin-bottom (20 / 2)px
 	&__form
@@ -87,6 +102,7 @@
 	&__specs
 		margin-bottom 40px
 		font-size 14px
+		font-weight normal
 		letter-spacing tracking(-25, 14)
 		+r($l)
 			margin-bottom 20px
@@ -105,15 +121,19 @@
 			border-bottom 1px solid #eeeeee
 	&__specs-term
 		float left
+		font-weight normal
 		+r($t)
 			max-width 70%
 		strong,
 		span
-			font-weight bold
+			font-family $mB
+			// font-weight bold
+			font-weight normal
 	&__specs-desc
 		float right
 
 	&__requisites
+		margin-bottom 20px
 		padding 30px
 		background #94D6D6
 	&__requisites-title
@@ -123,3 +143,6 @@
 		letter-spacing tracking(-25, 24)
 		+r($l)
 			font-size 16px
+	&__sertificate
+		margin-bottom 50px
+		display block

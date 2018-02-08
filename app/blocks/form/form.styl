@@ -17,10 +17,11 @@
 	&__field_message
 		margin-bottom 18px
 	&__field_file
-		margin-bottom 20px
+		margin-bottom 16px
 		overflow hidden
 	&__label
 		margin-bottom 5px
+		font-weight normal
 		font-size 14px
 		display block
 		letter-spacing tracking(-25, 14)
@@ -41,6 +42,8 @@
 		font-size 14px
 		+placeholder()
 			color #7f7f7f
+		&:focus
+			outline 1px solid #4cbaba
 	&__textarea
 		padding-top 5px
 		min-height 140px
@@ -49,7 +52,7 @@
 		&:checked
 			display block
 	&__file-button
-		margin-right 10px
+		margin-right 5px
 		padding-top 10px
 		padding-right 16px
 		padding-bottom 10px
@@ -58,6 +61,8 @@
 		vertical-align middle
 		background #EEE
 		color #292929
+		font-family $mM
+		font-weight normal
 		font-size 12px
 		text-transform uppercase
 		letter-spacing tracking(-25, 12)
@@ -74,7 +79,7 @@
 		overflow hidden
 		+r($d)
 			max-width 100%
-	&__file-input
+	.form__file-input
 		display none
 
 	&__submit
@@ -83,5 +88,7 @@
 		padding-bottom 17px
 		padding-left 10px
 		width 100%
+		font-family $mM
+		font-weight normal
 		font-size 14px
-		
+

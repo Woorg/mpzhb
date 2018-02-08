@@ -1,0 +1,177 @@
+include ../tabs/tabs
+
+mixin team()
+	+b.team&attributes(attributes)
+	.team
+		h2.team__title Наш коллектив
+
+		+tabs().team__tabs
+			ul.tabs__nav.team__tabs-nav
+				li.tabs__item.tabs__item_active
+					a.tabs__link(href="#tab-1") Отдел продаж
+				li.tabs__item
+					a.tabs__link(href="#tab-2") Бухгалтерия
+				li.tabs__item
+					a.tabs__link(href="#tab-3") Производство
+				li.tabs__item
+					a.tabs__link(href="#tab-4") Руководство
+			#tab-1.tabs__tab.tabs__tab_active
+				ul.team__list
+					il.team__item
+						a.team__image(href="assets/images/content/team-1.jpg")
+							img(src="assets/images/content/team-1.jpg", alt="Иванов Сергей Витальевич")
+						.team__name Иванов Сергей Витальевич
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-2.jpg")
+							img(src="assets/images/content/team-2.jpg", alt="Федоров Алексей Владимирович")
+						.team__name Федоров Алексей Владимирович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-3.jpg")
+							img(src="assets/images/content/team-3.jpg", alt="")
+						.team__name Савченко Инна Сергеевна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-4.jpg")
+							img(src="assets/images/content/team-4.jpg", alt="")
+						.team__name Тарасов Петр Олегович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-5.jpg")
+							img(src="assets/images/content/team-5.jpg", alt="")
+						.team__name Горбачева Алена Игоревна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-6.jpg")
+							img(src="assets/images/content/team-6.jpg", alt="")
+						.team__name Большакова Анна Анатольевна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+
+			#tab-2.tabs__tab
+				ul.team__list
+					il.team__item
+						a.team__image(href="assets/images/content/team-1.jpg")
+							img(src="assets/images/content/team-1.jpg", alt="Иванов Сергей Витальевич")
+						.team__name Иванов Сергей Витальевич
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-2.jpg")
+							img(src="assets/images/content/team-2.jpg", alt="Федоров Алексей Владимирович")
+						.team__name Федоров Алексей Владимирович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-3.jpg")
+							img(src="assets/images/content/team-3.jpg", alt="")
+						.team__name Савченко Инна Сергеевна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-4.jpg")
+							img(src="assets/images/content/team-4.jpg", alt="")
+						.team__name Тарасов Петр Олегович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-5.jpg")
+							img(src="assets/images/content/team-5.jpg", alt="")
+						.team__name Горбачева Алена Игоревна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-6.jpg")
+							img(src="assets/images/content/team-6.jpg", alt="")
+						.team__name Большакова Анна Анатольевна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+
+			#tab-3.tabs__tab
+				ul.team__list
+					il.team__item
+						a.team__image(href="assets/images/content/team-1.jpg")
+							img(src="assets/images/content/team-1.jpg", alt="Иванов Сергей Витальевич")
+						.team__name Иванов Сергей Витальевич
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-2.jpg")
+							img(src="assets/images/content/team-2.jpg", alt="Федоров Алексей Владимирович")
+						.team__name Федоров Алексей Владимирович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-3.jpg")
+							img(src="assets/images/content/team-3.jpg", alt="")
+						.team__name Савченко Инна Сергеевна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-4.jpg")
+							img(src="assets/images/content/team-4.jpg", alt="")
+						.team__name Тарасов Петр Олегович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+
+
+			#tab-4.tabs__tab
+				ul.team__list
+					il.team__item
+						a.team__image(href="assets/images/content/team-1.jpg")
+							img(src="assets/images/content/team-1.jpg", alt="Иванов Сергей Витальевич")
+						.team__name Иванов Сергей Витальевич
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-2.jpg")
+							img(src="assets/images/content/team-2.jpg", alt="Федоров Алексей Владимирович")
+						.team__name Федоров Алексей Владимирович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-3.jpg")
+							img(src="assets/images/content/team-3.jpg", alt="")
+						.team__name Савченко Инна Сергеевна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-4.jpg")
+							img(src="assets/images/content/team-4.jpg", alt="")
+						.team__name Тарасов Петр Олегович
+						.team__position Начальник отдела продаж
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+					il.team__item
+						a.team__image(href="assets/images/content/team-5.jpg")
+							img(src="assets/images/content/team-5.jpg", alt="")
+						.team__name Горбачева Алена Игоревна
+						.team__position Менеджер по продажам
+						a.team__phone(href="tel:+79636654444") +7 (963) 665 44 44
+						a.team__mail(href="mailto:sivanov@mpgb.ru") sivanov@mpgb.ru
+

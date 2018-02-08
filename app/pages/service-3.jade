@@ -1,0 +1,21 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/service/service
+include /blocks/advantages/advantages
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Изготовление металлоконструкций по индивидуальным размерам - Моспромжелезобетон';
+
+block content
+	+header()
+	+breadcrumbs-service-3()
+	main.main
+		.main__in.container
+			.main__title Изготовление металлоконструкций по индивидуальным размерам
+			+service-3()
+	+advantages-third()
+	+footer()

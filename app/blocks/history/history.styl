@@ -1,0 +1,33 @@
+.history
+	// &__title
+	// 	@extends .title
+	&__subtitle
+		@extends .subtitle
+		margin-bottom 30px
+	&__list
+		margin-bottom 45px
+	&__item
+		margin-bottom 18px
+	&__year
+		color #4cbaba
+		font-family $mB
+		font-size 24px
+		+r($l)
+			font-size 15px
+		+r($t)
+			font-size 14px
+	// &__desc
+	&__text
+		margin-bottom 40px
+		@extends .wysiwyg
+
+	&__image
+		margin-top 7px
+		margin-right 30px
+		margin-bottom 30px
+		display block
+		float left
+		+r($l)
+			margin-top 0
+			margin-right 0
+			float none

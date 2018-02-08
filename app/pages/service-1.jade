@@ -2,6 +2,7 @@ extends /blocks/layout-default/layout-default
 
 include /blocks/header/header
 include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
 include /blocks/service/service
 include /blocks/advantages/advantages
 include /blocks/footer/footer
@@ -13,6 +14,8 @@ block content
 	+header()
 	+breadcrumbs-service-1()
 	main.main
-		+service()
+		.main__in.container
+			.main__title Доставка продукции авто и ж/д транспортом
+			+service()
 	+advantages-second()
 	+footer()

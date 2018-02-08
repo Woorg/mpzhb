@@ -1,5 +1,4 @@
 .objects
-	display block
 	padding-top 67px
 	padding-bottom 82px
 	overflow hidden
@@ -95,6 +94,8 @@
 		+r($l)
 			margin-bottom 19px
 	&__text
+		font-family $mM
+		font-weight normal
 		font-size 18px
 		line-height 27px
 		text-transform uppercase
@@ -122,3 +123,138 @@
 			right 10px
 			+r($l)
 				right 10px
+
+
+.objects-full
+	overflow hidden
+	&__nav-list
+		margin-bottom 40px
+		font-size 0
+		display flex
+		justify-content center
+		flex-wrap wrap
+		text-align center
+
+	&__nav-item
+		display inline-block
+		vertical-align top
+		font-family $mM
+		font-weight normal
+		font-size 14px
+		text-transform uppercase
+		+r($l)
+			font-size 12px
+		&.current-menu-item
+			.objects-full__nav-link
+				border-radius 5px
+				border 2px solid #4cbaba
+				background-color #ffffff
+	&__nav-link
+		border 2px solid transparent
+		padding-top 10px
+		padding-right 16px
+		padding-bottom 11px
+		padding-left 18px
+		display block
+		color #292929
+		text-decoration none
+		tr(all .3s ease)
+		&:hover
+			color #292929
+			text-decoration none
+
+	&__list
+		margin-bottom 0
+		display flex
+		flex-wrap wrap
+		flex-grow 1
+		justify-content flex-start
+		+r($t)
+			justify-content center
+
+	&__item
+		width 25%
+		height 480px
+		// display inline-block
+		// vertical-align top
+		// +r($l)
+		// 	width 300px
+		// 	height 300px
+		+r($l)
+			width 33%
+		+r($t)
+			width 60%
+		+r($m)
+			width 100%
+
+	&__link
+		position relative
+		height 100%
+		display block
+		text-decoration none
+		color #fff
+		cursor pointer
+		text-align center
+		tr(all .3s ease)
+		object-fit cover
+		background-position 50% 0
+		background-repeat no-repeat
+		// background-size contain
+		&:after
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			// background #4cbaba
+			visibility hidden
+			opacity 0
+			background rgba(76, 186, 186,.4)
+			content ''
+			tr(all .3s ease)
+		&:hover
+			color #fff
+			text-decoration none
+			&:after
+				visibility visible
+				opacity 1
+			.objects-full__w
+				z-index 1
+				visibility visible
+				opacity 1
+			.objects-full__text
+				// text-decoration none
+				color #fff
+	&__w
+		position absolute
+		z-index 1
+		top 50%
+		left 50%
+		padding-right 50px
+		padding-left 50px
+		width 100%
+		transform translate(-50%, -50%)
+		visibility hidden
+		opacity 0
+		text-align center
+		tr(all .3s ease)
+	&__icon
+		margin-bottom 30px
+		display inline-block
+		vertical-align middle
+		retinaSprite($magnifying_glass_group)
+		+r($l)
+			margin-bottom 19px
+	&__text
+		font-family $mM
+		font-weight normal
+		font-size 18px
+		// line-height 27px
+		line-height 1.5
+		text-transform uppercase
+		text-decoration underline
+		+r($l)
+			font-size 14px
+			line-height 18px
+		+r($t)
+			font-size 12px

@@ -13,3 +13,42 @@
 		@extends .wysiwyg
 		+r($l)
 			margin-bottom 27px
+
+.about_second
+	background #FFF
+	// .about__in
+	// 	padding-top 70px
+	// 	padding-bottom 90px
+	// 	+r($l)
+	// 		padding-top 44px
+	// 		padding-bottom 56px
+	// 	+r($t)
+	// 		padding-top 40px
+	// 		padding-bottom 40px
+	// 	+r($m)
+	// 		padding-bottom 0
+	// .about__title
+	// 	text-align center
+
+	.about__subtitle
+		margin-bottom 18px
+		@extends .subtitle
+
+	.about__produce,
+	.about__list
+		margin-bottom 43px
+	.about__list-item
+		position relative
+		margin-bottom 18px
+		padding-left 30px
+		&:after
+			position absolute
+			top 10px
+			left 0
+			content ''
+			width 13px
+			height 10px
+			background url('../images/general/list-icon-second.svg') 0 0 / cover no-repeat
+			fill #4cbaba
+		&:last-child
+			margin-bottom 0

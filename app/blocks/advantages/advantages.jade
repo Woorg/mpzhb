@@ -28,3 +28,22 @@ mixin advantages-second()
 						.advantages__item-title Гибкое ценообразование
 						.advantages__item-text Мы готовы идти навстречу клиентам в вопросах ценообразования.
 						.advantages__icon
+
+
+
+mixin advantages-third()
+	section.advantages.advantages_third
+		.advantages__in.container
+			ul.advantages__list.row
+				li.advantages__item.advantages__item_first.col-md-4
+					.advantages__icon-w
+						.advantages__icon
+					.advantages__item-text В 2010 - 2012 годах на предприятии проведена полная модернизация производственного оборудования.
+				li.advantages__item.advantages__item_second.col-md-4
+					.advantages__icon-w
+						+icon('advantages-2', true).advantages__icon
+					.advantages__item-text Мощности завода позволяют справляться практически с любыми объемами производства без задержек и очередей.
+				li.advantages__item.advantages__item_third.col-md-4
+					.advantages__icon-w
+						.advantages__icon
+					.advantages__item-text Мы готовы идти навстречу клиентам в вопросах ценообразования.

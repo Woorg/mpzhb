@@ -1,12 +1,10 @@
 import svg4everybody from 'svg4everybody';
-import $ from 'jquery';
+// import $ from 'jquery';
 import slick from 'slick-carousel';
 import 'magnific-popup';
 import mask from "jquery-mask-plugin";
 
-
 (function ($) {
-	svg4everybody();
 
 	var styles = [
 		'padding: 0 9px',
@@ -31,7 +29,9 @@ import mask from "jquery-mask-plugin";
 		// 			arrows: false
 		// 	});
 		// }
-		const $carousel = $('.carousel__list');
+		svg4everybody();
+
+		var $carousel = $('.carousel__list');
 		if ($carousel.length) {
 			$carousel.slick({
 				slidesToShow: 4,
@@ -53,8 +53,8 @@ import mask from "jquery-mask-plugin";
 			});
 
 		}
-		const $cardSlider = $('.card__slider');
-		const $cardThumbs = $('.card__thumbs');
+		var $cardSlider = $('.card__slider');
+		var $cardThumbs = $('.card__thumbs');
 
 		$cardSlider.slick({
 			slidesToShow: 1,
@@ -77,16 +77,16 @@ import mask from "jquery-mask-plugin";
 
 
 		// Tabs
-		const tabsNavLink = $('.tabs__item');
-		const tabsNavLinkActive = 'tabs__item_active';
-		const tab = $('.tabs__tab');
-		const tabActive = 'tabs__tab_active';
+		var tabsNavLink = $('.tabs__item');
+		var tabsNavLinkActive = 'tabs__item_active';
+		var tab = $('.tabs__tab');
+		var tabActive = 'tabs__tab_active';
 
 		tabsNavLink.click(function (event) {
 			event.preventDefault();
 			$(this).addClass(tabsNavLinkActive);
 			$(this).siblings().removeClass(tabsNavLinkActive);
-			const tabCurrent = $(this).children().attr('href');
+			var tabCurrent = $(this).children().attr('href');
 			tab.not(tabCurrent).removeClass(tabActive).hide();
 			$(tabCurrent).fadeIn(50).addClass(tabActive).show();
 
@@ -104,6 +104,50 @@ import mask from "jquery-mask-plugin";
 			}
 		});
 
+		// Examples magnific
+
+		$('.examples__link').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+
+		$('.service__sertificate').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+
+		// Team magnific
+
+		$('.team__image').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+
+		// History magnific
+
+		$('.history__image').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+
+		// Objects-full magnific
+
+		$('.objects-full__link').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+
+
 		// File input
 
 		$('.form__label_file').on('change', '.form__file-input', function(event) {
@@ -112,7 +156,7 @@ import mask from "jquery-mask-plugin";
 
 		// mask
 
-		const $formPhone = $('.form__field_phone input');
+		var $formPhone = $('.form__field_phone input');
 
 		$formPhone.mask("+ 7 (999) 999-99-99",
 			{
@@ -120,17 +164,17 @@ import mask from "jquery-mask-plugin";
 			}
 		);
 
-		// function pageWidget(pages) {
-		// 	var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
-		// 	widgetWrap.prependTo("body");
-		// 	for (var i = 0; i < pages.length; i++) {
-		// 		$('<li class="widget_item"><a class="widget_link" href="' + pages[i] + '.html' + '">' + pages[i] + '</a></li>').appendTo('.widget_list');
-		// 	}
-		// 	var widgetStilization = $('<style>body {position:relative} .widget_wrap{position:absolute;top:0;left:0;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;cursor:pointer}.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{color:#fff;text-decoration:none;font-size:15px;}.widget_link:hover{text-decoration:underline} </style>');
-		// 	widgetStilization.prependTo(".widget_wrap");
-		// }
+		function pageWidget(pages) {
+			var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
+			widgetWrap.prependTo("body");
+			for (var i = 0; i < pages.length; i++) {
+				$('<li class="widget_item"><a class="widget_link" href="' + pages[i] + '.html' + '">' + pages[i] + '</a></li>').appendTo('.widget_list');
+			}
+			var widgetStilization = $('<style>body {position:relative} .widget_wrap{position:absolute;top:0;left:0;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;cursor:pointer}.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{color:#fff;text-decoration:none;font-size:15px;}.widget_link:hover{text-decoration:underline} </style>');
+			widgetStilization.prependTo(".widget_wrap");
+		}
 
-		// pageWidget(['index', 'card', 'categories', 'subcategories', 'service-1', 'service-2']);
+		pageWidget(['index', 'card', 'categories', 'subcategories', 'service-1', 'service-3', 'service-4', 'about', 'history', 'objects']);
 
 	});
 

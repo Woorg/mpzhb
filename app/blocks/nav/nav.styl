@@ -48,7 +48,6 @@
 						padding-left 0
 						padding-right 0
 	&__list
-
 		font-size 0
 		+r($m)
 			display none
@@ -69,6 +68,8 @@
 		display block
 		color #292929
 		font-size 18px
+		font-family $mM
+		font-weight normal
 		text-decoration none
 		text-transform uppercase
 		tr(all .3s ease)
@@ -96,8 +97,11 @@
 	.nav__title
 		margin-bottom 30px
 		color #ffffff
+		font-family $mM
+		font-weight normal
 		font-size 18px
-		line-height 22px
+		// line-height 22px
+		line-height 1.22222222222222
 		text-transform uppercase
 	.nav__list
 		+r($m)
@@ -131,6 +135,7 @@
 .nav_third
 	display block
 	.nav__list
+		margin-bottom 0
 		font-size 0
 		white-space nowrap
 		text-align center

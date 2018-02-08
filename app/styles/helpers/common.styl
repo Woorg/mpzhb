@@ -1,15 +1,29 @@
 .page
 	background #fff
 	font-display swap
-	font-family $v
+	// font-family $v
+	font-family $mR
 	font-weight normal
 	font-size 16px
 	color #292929
+
 	line-height 1.625
 	letter-spacing tracking(-25, 16)
 	tr(font-size .3s ease)
 	+r($t)
 		font-size 14px
+
+.page
+	.main
+		padding-bottom 100px
+		+r($t)
+			padding-bottom 50px
+		+r($m)
+			padding-bottom 40px
+	.main__in
+		padding-bottom 0
+
+
 .button
 	border none
 	padding-top 21px
@@ -21,6 +35,8 @@
 	border-radius 5px
 	background-color #4cbaba
 	color #ffffff
+	font-family $mM
+	font-weight normal
 	font-size 18px
 	text-align center
 	line-height 1
@@ -49,6 +65,8 @@
 	padding-bottom 15px
 	padding-left 13px
 	background-color #eeeeee
+	font-family $mM
+	font-weight normal
 	font-size 14px
 	color #292929
 	letter-spacing tracking(-25, 14)
@@ -67,10 +85,13 @@
 .title
 	margin-top 0
 	font-size 36px
-	font-weight 700
+	font-family $mB
+	// font-weight 700
+	font-weight normal
 	text-transform uppercase
 	line-height 46px
 	letter-spacing tracking(-25, 36)
+	hyphens auto
 	+r($l)
 		font-size 22px
 		line-height 29px
@@ -79,10 +100,14 @@
 		line-height 24px
 
 .subtitle
+	margin-top 0
 	font-size 24px
-	font-weight 700
+	font-family $mB
+	// font-weight 700
+	font-weight normal
 	text-transform uppercase
 	letter-spacing tracking(-25, 24)
+	hyphens auto
 	+r($l)
 		font-size 15px
 	+r($t)
@@ -93,15 +118,17 @@ img
 	height auto
 
 .wysiwyg
-	h1,
-	h2
+	h1
 		margin-top 0
 		margin-bottom 50px
 		font-size 36px
-		font-weight 700
+		font-family $mB
+		// font-weight 700
+		font-weight normal
 		text-transform uppercase
 		line-height 46px
 		letter-spacing tracking(-25, 36)
+		hyphens auto
 		+r($l)
 			margin-bottom 31px
 			font-size 22px
@@ -110,13 +137,19 @@ img
 			margin-bottom 19px
 			font-size 14px
 			line-height 18px
+	h2,
 	h3,
 	h4
-		margin-bottom 50px
+		margin-top 0
+		margin-bottom 30px
 		font-size 24px
-		font-weight 700
+		font-family $mB
+		// font-weight 700
+		font-weight normal
+		line-height 1.33333333333333
 		text-transform uppercase
 		letter-spacing tracking(-25, 24)
+		hyphens auto
 		+r($l)
 			margin-bottom 31px
 			font-size 15px
@@ -125,12 +158,45 @@ img
 	ul
 		margin-left 0
 		margin-bottom 50px
+		&.list.list_style-second
+			font-weight normal
+			font-size 16px
+			li
+				position relative
+				margin-bottom 5px
+				padding-left 13px
+				&:after
+					position absolute
+					top 13px
+					left 0
+					width 3px
+					height 3px
+					background #4cbaba
+					content ""
+					border-radius 50%
+		&.list.list_style-first
+			li
+				position relative
+				margin-bottom 26px
+				padding-left 30px
+				&:after
+					position absolute
+					top 10px
+					left 0
+					content ''
+					width 13px
+					height 10px
+					background url('../images/general/list-icon.svg') 0 0 / cover no-repeat
+					fill #4cbaba
+				&:last-child
+					margin-bottom 0
 
 	p
-		margin-bottom 50px
+		margin-bottom 30px
 		font-size 16px
-		line-height 26px
+		line-height 1.625
 		letter-spacing tracking(-25, 16)
+		hyphens auto
 		&:last-child
 			margin-bottom 0
 		+r($l)

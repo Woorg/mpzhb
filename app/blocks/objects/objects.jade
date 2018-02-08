@@ -1,9 +1,12 @@
 include ../icon/icon
+include ../tabs/tabs
+
+
 
 mixin objects()
 	section.objects
 		h2.objects__title Наши объекты
-		.objects__carousel.carousel 
+		.objects__carousel.carousel
 			ul.carousel__list
 				li.carousel__item
 					a.carousel__link(href="#" style="background-image: url('assets/images/content/object-1.jpg');")
@@ -25,7 +28,7 @@ mixin objects()
 						.carousel__w
 							.carousel__icon
 							.carousel__text Lorem ipsum dolor sit amet adipiscing elit
-							
+
 				li.carousel__item
 					a.carousel__link(href="#" style="background-image: url('assets/images/content/object-1.jpg');")
 						.carousel__w
@@ -46,7 +49,107 @@ mixin objects()
 						.carousel__w
 							.carousel__icon
 							.carousel__text Lorem ipsum dolor sit amet adipiscing elit
-				
+
 		.objects__button-w
 			a.objects__button.button(href="#") Все объекты
 				+icon('button-arrow', true).button__icon
+
+
+
+mixin objects-full()
+	.objects-full
+			.objects-full__nav
+				ul.objects-full__nav-list
+					li.objects-full__nav-item.current-menu-item
+						a.objects-full__nav-link(href="#nav") Все
+					li.objects-full__nav-item
+						a.objects-full__nav-link(href="#nav") Колонны легкого каркаса
+					li.objects-full__nav-item
+						a.objects-full__nav-link(href="#nav") Колонны тяжелого каркаса
+					li.objects-full__nav-item
+						a.objects-full__nav-link(href="#nav") Колонны лоджий
+
+			ul.objects-full__list
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-1.jpg" style="background-image: url('assets/images/content/object-1.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-2.jpg" style="background-image: url('assets/images/content/object-2.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-3.jpg" style="background-image: url('assets/images/content/object-3.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-4.jpg" style="background-image: url('assets/images/content/object-4.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-5.jpg" style="background-image: url('assets/images/content/object-5.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-6.jpg" style="background-image: url('assets/images/content/object-6.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-7.jpg" style="background-image: url('assets/images/content/object-7.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-8.jpg" style="background-image: url('assets/images/content/object-8.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-9.jpg" style="background-image: url('assets/images/content/object-9.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-10.jpg" style="background-image: url('assets/images/content/object-10.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-11.jpg" style="background-image: url('assets/images/content/object-11.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-12.jpg" style="background-image: url('assets/images/content/object-12.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-13.jpg" style="background-image: url('assets/images/content/object-13.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-14.jpg" style="background-image: url('assets/images/content/object-14.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-15.jpg" style="background-image: url('assets/images/content/object-15.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
+				li.objects-full__item
+					a.objects-full__link(href="assets/images/content/object-16.jpg" style="background-image: url('assets/images/content/object-16.jpg');")
+						.objects-full__w
+							.objects-full__icon
+							.objects-full__text Lorem ipsum dolor sit amet adipiscing elit
