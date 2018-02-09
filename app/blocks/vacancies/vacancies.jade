@@ -1,0 +1,109 @@
+include ../icon/icon
+
+mixin vacancies()
+	.vacancies&attributes(attributes)
+		.vacancies__row.row
+			.vacancies__col.col-md-8
+				article.vacancies__item
+					.vacancies__title Инженер лаборант технолог на производство ЖБИ и растворов бетонных смесей
+					dl.vacancies__demands
+						.vacancies__demants-item
+							dt.vacancies__demants-term График:
+							dd.vacancies__demants-desc Полный рабочий день
+						.vacancies__demants-item
+							dt.vacancies__demants-term Образование:
+							dd.vacancies__demants-desc среднее-специальное или высшее
+						.vacancies__demants-item
+							dt.vacancies__demants-term Опыт работы:
+							dd.vacancies__demants-desc от 1 года
+					.vacancies__salary от 38 000 р.
+					a.vacancies__link(href="#")
+
+				article.vacancies__item
+					.vacancies__title Водитель на автобетоносмеситель
+					dl.vacancies__demands
+						.vacancies__demants-item
+							dt.vacancies__demants-term График:
+							dd.vacancies__demants-desc Полный рабочий день
+						.vacancies__demants-item
+							dt.vacancies__demants-term Образование:
+							dd.vacancies__demants-desc среднее-специальное или высшее
+						.vacancies__demants-item
+							dt.vacancies__demants-term Опыт работы:
+							dd.vacancies__demants-desc от 1 года
+					.vacancies__salary от 40 000 р.
+					a.vacancies__link(href="#")
+
+				article.vacancies__item
+					.vacancies__title Формовщик
+					dl.vacancies__demands
+						.vacancies__demants-item
+							dt.vacancies__demants-term График:
+							dd.vacancies__demants-desc Полный рабочий день
+						.vacancies__demants-item
+							dt.vacancies__demants-term Образование:
+							dd.vacancies__demants-desc среднее-специальное или высшее
+						.vacancies__demants-item
+							dt.vacancies__demants-term Опыт работы:
+							dd.vacancies__demants-desc от 1 года
+					.vacancies__salary от 40 000 р.
+					a.vacancies__link(href="#")
+
+				article.vacancies__item
+					.vacancies__title Машинист мостового и башенного кранов
+					dl.vacancies__demands
+						.vacancies__demants-item
+							dt.vacancies__demants-term График:
+							dd.vacancies__demants-desc Полный рабочий день
+						.vacancies__demants-item
+							dt.vacancies__demants-term Образование:
+							dd.vacancies__demants-desc среднее-специальное или высшее
+						.vacancies__demants-item
+							dt.vacancies__demants-term Опыт работы:
+							dd.vacancies__demants-desc от 1 года
+					.vacancies__salary от 66 000 р.
+					a.vacancies__link(href="#")
+
+			.vacancies__col.col-md-4
+				+form-resume().vacancies__form
+
+
+mixin vacancies-single()
+	.vacancies&attributes(attributes)
+		.vacancies__row.row
+			.vacancies__col.col-md-8
+				article.vacancies__item
+					.vacancies__text
+						.vacancies__top
+							h2.vacancies__subtitle Зарплата:
+							.vacancies__salary от 38 000 р.
+
+						h2.vacancies__subtitle Обязанности:
+
+						ul.list.list_style-second
+							li Проводить выборочный пооперационный контроль при изготовлении производственных и товарных бетонных смесей, а также пооперационный контроль при изготовлении железобетонной продукции
+							li Организовывать проведение или проводить лабораторные анализы, испытания и другие виды исследования материалов для бетонов и растворов для определения соответствия действующим техническим условиям и стандартам, анализировать полученные результаты и систематизировать их
+							li Участвовать в работах по подбору составов бетонов, растворов
+							li Принимать готовую продукцию
+							li Организовывать своеременное оформление результаттов испытаний
+
+						h2.vacancies__subtitle Требования:
+
+						ul.list.list_style-second
+							li Опыт работы от 2-лет на аналогичной должности
+							li Знание технологии приготовления товарных бетонов
+							li Знание нормативной документации
+
+						h2.vacancies__subtitle Условия:
+
+						ul.list.list_style-second
+							li Трудоустройство в соответствии с ТК РФ
+							li Режим работы: 2/2 с 8:00 до 20:00
+							li Место работы: г. Москва
+							li Наличие служебного транспорта
+							li Своевременная выплата зароботной платы
+
+				a.vacancies__button.button.button_third.button_prev(href="#") Назад к списку
+					+icon('button-arrow', true).button__icon
+			.vacancies__col.col-md-4
+				+form-resume().vacancies__form

@@ -44,4 +44,52 @@ mixin form-feedback()
 				input.form__submit.button(type="submit", value="Отправить заявку")
 
 
+mixin form-articles()
+	aside.form.form_second&attributes(attributes)
+		h2.form__title Поиск публикаций
+		.form__w
+			form(action="", method="post")
+				.form__field.form__field_select
+					label.form__label(for="month") Месяц публикаций:
+					select#month.form__select(name="")
+						option(value="") За все время
+						option(value="") Июнь
+						option(value="") Июль
+						option(value="") Август
+						option(value="") Сентябрь
+						option(value="") Октябрь
+						option(value="") Ноябрь
+						option(value="") Декабрь
 
+				.form__field.form__field_select
+					label.form__label(for="category") Категория:
+					select#category.form__select(name="")
+						option(value="") Все
+						option(value="") Новости
+						option(value="") Акции
+						option(value="") Статьи
+
+				.form__button-w
+					button.form__reset.button.button_second(type="reset") Сбросить
+					input.form__submit.button(type="submit", value="Искать")
+
+
+
+mixin form-resume()
+	aside.form.form_third&attributes(attributes)
+		h2.form__title Отправить резюме
+		.form__w
+			form(action="", method="post")
+				.form__field
+					label.form__label(for="fullname") ФИО:
+					input#fullname.form__input(type="text", value="", name="fullname_1", placeholder="")
+				.form__field.form__field_phone
+					label.form__label(for="phone") Телефон:
+					input#phone.form__input(type="text", value="", name="phone_1", placeholder="+7 (...)")
+				.form__field.form__field_file
+					label.form__label.form__label_file(for="file")
+						.form__file-button файл резюме
+						.form__file-text - doc, pdf, jpg до 1 мб
+						input#file.form__file-input(type="file", value="", name="file_1")
+
+				input.form__submit.button(type="submit", value="Отправить")

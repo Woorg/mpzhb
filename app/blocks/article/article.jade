@@ -1,0 +1,69 @@
+include ../icon/icon
+include ../form/form
+
+
+mixin article()
+	.article&attributes(attributes)
+		.article__row.row
+			.article__col.col-md-8
+				article.article__item
+					a.article__title(href="#") Обновление оборудования
+					.article__text
+						p Дорогие клиенты и пратнеры! Спешим Вас порадовать приятной новостью! В сентябре на нашем заводе прошло капитальное обновление оборудования и теперь новый цех заработал в свою полную силу.
+					span.article__date 12.12.17.
+					a.article__category(href="") Новости
+
+				article.article__item
+					a.article__title(href="#") Летние скидки на продукцию ЖБИ
+					.article__text
+						p Наступило лето - пора отпусков и активной стройки, поэтому коллектив «Моспромжелезобетон» решил порадовать своих клиентов разнообразными скидками и выгодными предложениями.
+					span.article__date 12.12.17.
+					a.article__category(href="") Акции
+
+				article.article__item
+					a.article__title(href="#") Осенние скидки на продукцию ЖБИ
+					.article__text
+						p Задача коллектива «Моспромжелезобетон» - максимально качественно обслуживать своих настоящих и будующих клиентов. Мы поможем Вам сэкономить не только Ваши средства, но и время! Мы стараемся для Вас!
+					span.article__date 12.12.17.
+					a.article__category(href="") Акции
+
+				article.article__item
+					a.article__title(href="#") Строители начинают анализировать
+					.article__text
+						p Осень в разгаре, и строители начинают анализировать целесообразность предложения работ в условиях минусовых температур. Существует мнение, что монтаж зданий и сооружений в зимнее время приводит к ухудшению качества строительства, поэтому его следует избегать.
+					span.article__date 12.12.17.
+					a.article__category(href="") Статьи
+
+				.article__button-w
+					a.article__button.button.button_second(href="#") Предыдущие публикации
+			.article__col.col-md-4
+				+form-articles().article__form
+
+
+
+mixin article-single()
+	.article&attributes(attributes)
+		.article__row.row
+			.article__col.col-md-8
+				article.article__item
+					.article__meta
+						span.article__date 12.12.17.
+						a.article__category(href="") Новости
+					.article__text
+						p Дорогие клиенты и пратнеры! Спешим Вас порадовать приятной новостью! В сентябре на нашем заводе прошло капитальное обновление оборудования и теперь новый цех заработал в свою полную силу.
+
+						p В техническом арменеле компании появились новые формы и вибростолы китайского производства для изготовления плит и перемычек, которые отныне будут также доступны в каталоге «Моспромжелезобетон»
+
+						p Коллектив нашего завода предлагает всем своим настоящим и потенциальным клиентам гарантированное качество, надежность и точность изготовления каждой отдельной детали! Благодаря гибкой ценовой политике и индивидуальному подходу к клиентам, мы обеспечим успешное развитие любого вашего проекта и предприятия.
+
+						p Ваш комфорт - наша забота!
+
+
+				.article__button-w
+					a.article__button.button.button_third.button_prev(href="#") Назад к списку
+						+icon('button-arrow', true).button__icon
+					a.article__button.button.button_third.button_next(href="#") Следующая публикация
+						+icon('button-arrow', true).button__icon
+
+			.article__col.col-md-4
+				+form-articles().article__form

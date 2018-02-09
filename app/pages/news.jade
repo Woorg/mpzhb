@@ -3,9 +3,8 @@ extends /blocks/layout-default/layout-default
 include /blocks/header/header
 include /blocks/breadcrumbs/breadcrumbs
 include /blocks/main/main
-include /blocks/objects/objects
+include /blocks/article/article
 include /blocks/about/about
-include /blocks/advantages/advantages
 include /blocks/footer/footer
 
 block head
@@ -15,8 +14,7 @@ block content
 	+header()
 	+breadcrumbs-news()
 	main.main
-		.main__in.container
-			.main__title Новости
-
-	//- +advantages-third()
+		section.main__in.container
+			h1.main__title Новости
+			+article()
 	+footer()

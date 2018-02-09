@@ -1,0 +1,51 @@
+.article
+	&__item
+		margin-bottom 40px
+	&__title
+		margin-bottom 10px
+		display block
+		font-family $mM
+		font-size 18px
+		line-height 1.44444444444444
+		text-decoration underline
+		text-transform uppercase
+		color #292929
+		&:hover
+			color #292929
+			text-decoration none
+	&__meta
+		margin-bottom 30px
+	&__text
+		margin-bottom 12px
+		@extends .wysiwyg
+	&__date,
+	&__category
+		display inline-block
+		vertical-align middle
+	&__date
+		margin-right 10px
+		padding 2px 6px
+		background-color #4cbaba
+		color #292929
+		font-size 16px
+		line-height 1.4
+	&__category
+		color #7f7f7f
+		&:hover
+			color #7f7f7f
+	&__button-w
+		margin-top 60px
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		+r($l)
+			margin-bottom 20px
+	&__button
+		position relative
+		+r($l)
+			margin-bottom 10px
+
+	&__form
+		margin-left 30px
+		+r($l)
+			margin-left 0

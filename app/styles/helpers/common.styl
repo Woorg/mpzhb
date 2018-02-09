@@ -59,10 +59,11 @@
 		height 14px
 		fill #ffffff
 
-.button_second
-	padding-top 19px
+.button_second,
+.button_third
+	padding-top 18px
 	padding-right 15px
-	padding-bottom 15px
+	padding-bottom 17px
 	padding-left 13px
 	background-color #eeeeee
 	font-family $mM
@@ -81,6 +82,35 @@
 	&:hover
 		background-color darken(#eeeeee, 10)
 		color #292929
+
+.button_third
+	position relative
+	.button__icon
+		position absolute
+		top 50%
+		margin-left 0
+		margin-right 0
+		width 16px
+		height 12px
+		transform translateY(-50%)
+	&.button_prev
+		padding-left 40px
+		.button__icon
+			position absolute
+			top 50%
+			left 13px
+			margin-right 0
+			transform translateY(-50%) rotate(180deg)
+
+	&.button_next
+		padding-right 40px
+		.button__icon
+			position absolute
+			top 50%
+			right 13px
+			left auto
+			margin-right 0
+			transform translateY(-50%) rotate(0)
 
 .title
 	margin-top 0
@@ -163,7 +193,7 @@ img
 			font-size 16px
 			li
 				position relative
-				margin-bottom 5px
+				margin-bottom 10px
 				padding-left 13px
 				&:after
 					position absolute

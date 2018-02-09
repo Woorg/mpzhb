@@ -39,11 +39,23 @@ import mask from "jquery-mask-plugin";
 					{
 					breakpoint: 1200,
 						settings: {
-						  slidesToShow: 2
+						  slidesToShow: 3
 						}
 					},
 					{
 					breakpoint: 991,
+						settings: {
+						  slidesToShow: 3
+						}
+					},
+					{
+					breakpoint: 768,
+						settings: {
+						  slidesToShow: 2
+						}
+					},
+					{
+					breakpoint: 425,
 						settings: {
 						  slidesToShow: 1
 						}
@@ -174,7 +186,22 @@ import mask from "jquery-mask-plugin";
 			widgetStilization.prependTo(".widget_wrap");
 		}
 
-		pageWidget(['index', 'card', 'categories', 'subcategories', 'service-1', 'service-3', 'service-4', 'about', 'history', 'objects']);
+		pageWidget([
+			'index',
+			'card',
+			'categories',
+			'subcategories',
+			'service-1',
+			'service-3',
+			'service-4',
+			'about',
+			'history',
+			'objects',
+			'news',
+			'news-single',
+			'vacancies',
+			'vacancies-single'
+		]);
 
 	});
 

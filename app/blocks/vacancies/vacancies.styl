@@ -1,0 +1,59 @@
+.vacancies
+	display block
+	&__item
+		position relative
+		margin-bottom 30px
+		&:hover
+			.vacancies__title
+				text-decoration none
+	&__title
+		margin-bottom 10px
+		font-family $mM
+		font-size 18px
+		// line-height 2.05555555555556
+		text-decoration underline
+		text-transform uppercase
+
+	&__demands
+		margin 0
+		margin-bottom 5px
+	&__demands-item
+		line-height 1.625
+	.vacancies__demants-term,
+	.vacancies__demants-desc
+		display inline-block
+		vertical-align top
+	.vacancies__demants-term
+		color #7f7f7f
+		font-family $mR
+		font-weight normal
+	&__salary
+		font-family $mB
+		font-size 24px
+		line-height 1
+		color #4cbaba
+	&__link
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		color #292929
+		&:hover
+			color #292929
+			text-decoration none
+	&__top
+		margin-bottom 40px
+
+	.vacancies__subtitle
+		@extends .subtitle
+		margin-bottom 22px
+
+	&__text
+		@extends .wysiwyg
+
+	&__form
+		margin-left 30px
+		+r($l)
+			margin-left 0
+
