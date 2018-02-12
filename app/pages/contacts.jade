@@ -1,0 +1,19 @@
+extends /blocks/layout-default/layout-map
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/contacts/contacts
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'Контакты - Моспромжелезобетон';
+
+block content
+	+header()
+	+breadcrumbs-contacts()
+	main.main
+		section.main__in.container
+			h1.main__title Контакты
+			+contacts()
+	+footer()

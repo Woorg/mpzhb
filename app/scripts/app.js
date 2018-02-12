@@ -176,6 +176,17 @@ import mask from "jquery-mask-plugin";
 			}
 		);
 
+
+		// Popups
+
+		$('.open-popup').magnificPopup({
+			type:'inline',
+			midClick: true
+		});
+
+
+
+
 		function pageWidget(pages) {
 			var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
 			widgetWrap.prependTo("body");
@@ -200,7 +211,9 @@ import mask from "jquery-mask-plugin";
 			'news',
 			'news-single',
 			'vacancies',
-			'vacancies-single'
+			'vacancies-single',
+			'contacts'
+
 		]);
 
 	});

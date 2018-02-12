@@ -146,3 +146,14 @@ mixin breadcrumbs-vacancies-single()
 					| &rsaquo;
 				span(rel='v:child', typeof='v:Breadcrumb')
 					span.breadcrumb_last(rel='v:url', property='v:title') Инженер лаборант технолог на производство ЖБИ и растворов бетонных смесей
+
+
+mixin breadcrumbs-contacts()
+	.breadcrumbs
+		.container.breadcrumbs__in
+			span(xmlns:v='http://rdf.data-vocabulary.org/#')
+				span(typeof='v:Breadcrumb')
+					a(href='#', rel='v:url', property='v:title') Главная
+					| &rsaquo;
+				span(rel='v:child', typeof='v:Breadcrumb')
+					span.breadcrumb_last(rel='v:url', property='v:title') Контакты

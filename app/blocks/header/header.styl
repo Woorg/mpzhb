@@ -52,6 +52,7 @@
 	&__bid-icon,
 	&__download-icon,
 	&__tender-icon
+		margin-top -2px
 		margin-right 5px
 		display inline-block
 		vertical-align middle
@@ -72,7 +73,7 @@
 			text-align left
 			text-align-last left
 		+r($t)
-			text-align-last center
+			text-align-last left
 		+r($m)
 			// padding-top 0
 			display none
@@ -80,16 +81,28 @@
 			// text-align-last left
 	&__body
 		padding-top 34px
-		padding-bottom 35px
+		// padding-bottom 15px
+		padding-bottom 30px
 		background-color #ffffff
 		font-size 0
 		box-shadow 0 0 20px rgba(41, 41, 41, .2)
 		+r($l)
+			padding-bottom 0
 			text-align center
 		+r($m)
 			text-align left
-	&__in
-		clr()
+		.header__in
+			position relative
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			align-items center
+			clr()
+			+r($l)
+				// display block
+				flex-grow 1
+				justify-content center
+
 	&__logo,
 	&__nav,
 	&__search-form
@@ -97,15 +110,30 @@
 		vertical-align middle
 		+r($d)
 			display block
+	&__nav
+		+r($l)
+			width 100%
+			order 3
 	&__logo
 		margin-right 65px
+		margin-right auto
 		+r($l)
 			margin auto
-	&__search-form
-		margin-top 12px
-		float right
-		+r($m)
-			margin-top 0
+	.header__search-form
+		// margin-top 12px
+		margin-left 40px
+		// float right
+		+r(1319px)
+			margin-left 0
+			width 100%
+		+r($l)
+			margin-top 18px
+			margin-bottom 0
+			margin-left 0
+		+r(480px)
+			margin-top 10px
+		// +r($m)
+		// 	margin-top 0
 
 .logo
 	retinaSprite($logo_group)

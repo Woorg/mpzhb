@@ -93,3 +93,51 @@ mixin form-resume()
 						input#file.form__file-input(type="file", value="", name="file_1")
 
 				input.form__submit.button(type="submit", value="Отправить")
+
+
+
+mixin form-calc()
+	aside.form.form_fourth&attributes(attributes)
+		h2.form__title Заявка на расчет
+		.form__w
+			form(action="", method="post")
+				.form__field-w
+					.form__field.form__field_text
+						label.form__label(for="fullname") Ваше имя:
+						input#fullname.form__input(type="text", value="", name="fullname_1", placeholder="")
+					.form__field.form__field_text
+						label.form__label(for="email-2") E-mail:
+						input#email-2.form__input(type="text", value="", name="email_2", placeholder="")
+				.form__field.form__field_message
+					label.form__label(for="message") Текст сообщения:
+					textarea#message.form__textarea(value="", name="message_1")
+				.form__field.form__field_file
+					label.form__label.form__label_file(for="file")
+						.form__file-button Вложение
+						.form__file-text - не обязательно
+						input#file.form__file-input(type="file", value="", name="file_1")
+				.form__note Отправляя свои данные, Вы соглашаетесь с обязательными условиями и
+					a(href="#") политикой конфиденциальность
+
+				.form__button-w
+					input.form__submit.button(type="submit", value="Отправить")
+
+
+
+
+mixin form-tender()
+	aside.form.form_five&attributes(attributes)
+		h2.form__title Пригласить в тендер
+		.form__w
+			form(action="", method="post")
+				.form__field-w
+					.form__field.form__field_text
+						label.form__label(for="tender_link") Ссылка на страницу тендера:
+						input#tender_link.form__input(type="text", value="", name="tender_link_1", placeholder="")
+				.form__field.form__field_message
+					label.form__label(for="message-2") Комментарий (не обязательно):
+					textarea#message-2.form__textarea(value="", name="message_2")
+				.form__note Отправляя свои данные, Вы соглашаетесь с обязательными условиями и
+					a(href="#") политикой конфиденциальность
+				.form__button-w
+					input.form__submit.button(type="submit", value="Отправить")

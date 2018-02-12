@@ -1,0 +1,38 @@
+.contacts
+	&__subtitle
+		margin-bottom 35px
+		@extends .subtitle
+	&__address,
+	&__work
+		position relative
+		.contacts__address-icon,
+		.contacts__work-icon
+			position absolute
+			top 50%
+			left 0
+			fill #4cbaba
+			transform translateY(-50%)
+	&__address-icon
+		width 12px
+		height 14px
+	&__address
+		padding-left 18px
+
+	&__work
+		margin-bottom 50px
+		padding-left 24px
+
+	&__work-icon
+		width 14px
+		height 14px
+
+	&__team
+		margin-bottom 20px
+		clr()
+	&__map
+		margin-bottom 30px
+
+	&__form
+		margin-left 30px
+		+r($l)
+			margin-left 0

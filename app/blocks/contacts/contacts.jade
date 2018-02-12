@@ -1,0 +1,29 @@
+include ../form/form
+include ../icon/icon
+include ../team/team
+include ../map/map
+
+
+
+mixin contacts()
+	.contacts&attributes(attributes)
+		.contacts__row.row
+			.contacts__col.col-md-8
+				h2.contacts__subtitle Адрес и время работы
+
+				.contacts__address 125555, Россия, г. Москва, ул. Николая Хомушина, 2/7 с38, м. Бульвар Рокоссовского
+					+icon('map-marker', true).contacts__address-icon
+				.contacts__work пн-пт с 9:00 до 18:00
+					+icon('clock', true).contacts__work-icon
+
+				h2.contacts__subtitle Контакты сотрудников
+
+				+team-second().contacts__team
+
+				h2.contacts__subtitle Схема проезда
+
+				+map().contacts__map
+
+
+			.contacts__col.col-md-4
+				+form-feedback().contacts__form

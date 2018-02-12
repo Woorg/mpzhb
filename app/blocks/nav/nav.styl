@@ -12,6 +12,8 @@
 		padding-bottom 6px
 		padding-left 20px
 		display none
+		font-family $mM
+		font-weight normal
 		font-size 14px
 		color #292929
 		text-transform uppercase
@@ -59,6 +61,9 @@
 			.nav__link,
 			a
 				padding-right 0
+		&:hover
+			.subnav
+				display block
 	&__link,
 	a
 		position relative
@@ -106,12 +111,10 @@
 	.nav__list
 		+r($m)
 			display block
-	.nav__item,
-	li
+	.nav__list li
 		margin-bottom 14px
 		display block
-	.nav__link,
-	a
+	.nav__list a
 		padding 0
 		text-decoration underline
 		font-size 14px
@@ -141,19 +144,19 @@
 		text-align center
 		+r($m)
 			display block
-	.nav__item
+	.nav__list li
 		display inline-block
 		vertical-align top
 		&:last-child
-			.nav__link
+			a
 				padding-right 17px
 
 	.nav__item_active
-		.nav__link
+		a
 			border-radius 5px
 			border 2px solid #4cbaba
 			background-color #ffffff
-	.nav__link
+	.nav__list a
 		border 2px solid transparent
 		padding-top 10px
 		padding-right 17px
@@ -173,3 +176,115 @@
 			padding-right 6px
 			padding-left 8px
 			font-size 12px
+
+
+.subnav
+	position absolute
+	z-index 1
+	top calc(100% + 6px)
+	left 15px
+	right 15px
+	padding-top 30px
+	padding-right 40px
+	padding-bottom 30px
+	padding-left 40px
+	// width 100%
+	display none
+	box-shadow 0 0 20px rgba(41, 41, 41, 0.2)
+	background-color #ffffff
+	clr()
+	+r($l)
+		top 100%
+	+r($t)
+		padding-top 15px
+		padding-right 20px
+		padding-left 20px
+		padding-bottom 15px
+	+r(480px)
+		position static
+	&:before
+		position absolute
+		top -40px
+		right 0
+		left 0
+		height 50px
+		content ""
+		background transparent
+		+r($l)
+			top -15px
+			height 30px
+	&__col
+		margin-right 30px
+		width 48%
+		float left
+		+r($l)
+			width 100%
+			margin-right 0
+		&:last-child
+			margin-right 0
+	&__nav
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
+
+	.subnav__title
+		margin 0
+		margin-bottom 20px
+		padding 0
+		display block
+		color #292929
+		font-family $mM
+		font-weight normal
+		font-size 18px
+		text-decoration underline
+		text-transform uppercase
+		&:hover
+			color #4cbaba
+			text-decoration none
+	.subnav__list
+		margin 0
+		font-size 0
+	.subnav__list li
+		margin-right 30px
+		margin-bottom 10px
+		width 47%
+		font-size 14px
+		+r($l)
+			width 100%
+			margin-right 0
+			text-align left
+		&:first-child
+			width 100%
+			margin-right 0
+			margin-bottom 20px
+			a
+				margin 0
+				padding 0
+				display block
+				color #292929
+				font-family $mM
+				font-weight normal
+				font-size 18px
+				text-decoration underline
+				text-transform uppercase
+				+r($t)
+					font-size 14px
+				&:hover
+					color #4cbaba
+					text-decoration none
+		&:nth-child(2n + 3)
+			margin-right 0
+	.subnav__list a
+		margin 0
+		padding 0
+		display block
+		font-size 14px
+		color #292929
+		text-transform none
+		+r($t)
+			font-size 12px
+		span
+			color #7f7f7f
+		&:hover
+			color #4cbaba
+			text-decoration none

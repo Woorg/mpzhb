@@ -113,3 +113,62 @@
 	.form__file-button,
 	.form__file-text
 		font-size 12px
+
+
+
+.form_fourth,
+.form_five
+	position relative
+	margin auto
+	max-width 750px
+	.form__title
+		font-size 24px
+		+r($t)
+			font-size 18px
+	.form__field-w
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+	.form__input,
+	.form__textarea
+		&:focus
+			outline none
+			border 2px solid #4cbaba
+	.form__field_text
+		width 49%
+		+r($t)
+			width 100%
+	form
+		clr()
+
+	.form__field_message
+		clear both
+	.form__note
+		margin-bottom 18px
+		font-weight normal
+		font-size 14px
+		line-height 1.2
+		display block
+		letter-spacing tracking(-25, 14)
+		cursor pointer
+		color #292929
+		+r($t)
+			font-size 12px
+		a
+			color #292929
+			text-decoration underline
+			&:hover
+				color #292929
+				text-decoration none
+	.form__button-w
+		text-align right
+	.form__submit
+		width auto
+		+r($t)
+			width 100%
+
+
+.form_five
+	max-width 555px
+	.form__field_text
+		width 100%

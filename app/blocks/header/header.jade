@@ -13,13 +13,13 @@ mixin header()
 							+icon('phone', true).header__phone-icon
 							span +7 (495) 558 58 51
 					.col-lg-6.col-md-12.header__top-right
-						a.header__bid(href="")
+						a.header__bid.open-popup(href="#popup")
 							+icon('mail', true).header__bid-icon
 							span Отправить заявку
-						a.header__download(href="")
+						a.header__download.open-popup(href="#popup-2")
 							+icon('download', true).header__download-icon
 							span Скачать прайс-лист
-						a.header__tender(href="")
+						a.header__tender.open-popup(href="#popup-3")
 							+icon('chart', true).header__tender-icon
 							span Пригласить в тендер
 		.header__body
@@ -34,12 +34,158 @@ mixin header()
 						li.nav__item
 							a.nav__link(href="#") Продукция
 								+icon('nav-icon', true).nav__link-icon
+
+							.subnav
+								.subnav__col
+									.subnav__nav
+										ul.subnav__list
+											li.subnav__item
+												a(href="#") Изделия для гражданских зданий
+											li.subnav__item
+												a.subnav__link(href="#") Плиты пустотные
+													span (478)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты лоджий и балконов
+													span (5)
+											li.subnav__item
+												a.subnav__link(href="#") Элементы стеновые
+													span (17)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты пустотные ПБ
+													span (402)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты опорные
+													span (15)
+											li.subnav__item
+												a.subnav__link(href="#") Прогоны
+													span (30)
+											li.subnav__item
+												a.subnav__link(href="#") Лестничные марши, площадки, ступени
+													span (77)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты лоджий и балконов
+													span (5)
+									.subnav__nav
+										ul.subnav__list
+											li.subnav__item
+												a(href="#") Изделия для промышленных зданий
+											li.subnav__item
+												a.subnav__link(href="#") Панели стеновые
+													span (8)
+											li.subnav__item
+												a.subnav__link(href="#") Панели стеновые ж/б
+													span (17)
+											li.subnav__item
+												a.subnav__link(href="#") Панели стеновые ж/б трехслойные
+													span (79)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты перекрытий ребристые
+													span (62)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты покрытий ребристые
+													span (142)
+											li.subnav__item
+												a.subnav__link(href="#") Фермы
+													span (7)
+											li.subnav__item
+												a.subnav__link(href="#") Балки
+													span (185)
+											li.subnav__item
+												a.subnav__link(href="#") Ригели
+													span (72)
+											li.subnav__item
+												a.subnav__link(href="#") Колонны
+													span (330)
+											li.subnav__item
+												a.subnav__link(href="#") Диафрагмы жесткости
+													span (39)
+
+									.subnav__nav
+										ul.subnav__list
+											li.subnav__item
+												a(href="#") Фундаменты и элементы нулевого цикла
+
+											li.subnav__item
+												a.subnav__link(href="#") Блоки стеновые подвала
+													span (34)
+											li.subnav__item
+												a.subnav__link(href="#") Ленточные фундаменты
+													span (105)
+											li.subnav__item
+												a.subnav__link(href="#") Фундаменты ии 04-1 в. 6
+													span (3)
+											li.subnav__item
+												a.subnav__link(href="#") Фундаменты колонн
+													span (13)
+											li.subnav__item
+												a.subnav__link(href="#") Фундаменты под рамы с/х зданий
+													span (3)
+								.subnav__col
+									.subnav__nav
+										ul.subnav__list
+											li.subnav__item
+												a(href="#") Изделия для устройства коммуникаций
+											li.subnav__item
+												a.subnav__link(href="#") Плиты теплотрасс
+													span (4)
+											li.subnav__item
+												a.subnav__link(href="#") Утяжелители бетонные
+													span (9)
+											li.subnav__item
+												a.subnav__link(href="#") Кольца и крыши колодцев
+													span (21)
+											li.subnav__item
+												a.subnav__link(href="#") Опоры ЛЭП
+													span (7)
+											li.subnav__item
+												a.subnav__link(href="#") Лотки
+													span (137)
+											li.subnav__item
+												a.subnav__link(href="#") Панели КНС
+													span (19)
+
+									.subnav__nav
+										ul.subnav__list
+											li.subnav__item
+												a(href="#") Элементы дорожного строительства и ограждений
+											li.subnav__item
+												a.subnav__link(href="#") Плиты дорожные ПДН
+													span (5)
+											li.subnav__item
+												a.subnav__link(href="#") Плиты ПАГ 14
+													span (1)
+											li.subnav__item
+												a.subnav__link(href="#") Вибропрессованные изделия
+													span (8)
+
+									.subnav__nav
+										ul.subnav__list
+											li.subnav__item
+												a(href="#") Другие изделия
+											li.subnav__item
+												a.subnav__link(href="#") Водоотводные сооружения
+													span (2)
+											li.subnav__item
+												a.subnav__link(href="#") Детали ограды
+													span (29)
+											li.subnav__item
+												a.subnav__link(href="#") Ж/б стойки для опор
+													span (13)
+											li.subnav__item
+												a.subnav__link(href="#") Маты
+													span (7)
+											li.subnav__item
+												a.subnav__link(href="#") Опорные подушки
+													span (27)
+
+
 						li.nav__item
 							a.nav__link(href="#") Услуги
 								+icon('nav-icon', true).nav__link-icon
 						li.nav__item
 							a.nav__link(href="#") Компания
 								+icon('nav-icon', true).nav__link-icon
+
 				.header__search-form.search-form
 					form.search-form__form(action="/", method="get")
 						input.search-form__input(type="text", value="", placeholder="")
